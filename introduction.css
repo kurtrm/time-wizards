@@ -20,7 +20,26 @@ a {
   height: 40%;
   border: solid;
   border-color: black;
+}
 
+.go-button-two {
+  display:inline-block;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 20%;
+  height: 40%;
+  border: solid;
+  border-color: black;
+}
+
+.go-button-three {
+  display:inline-block;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 20%;
+  height: 40%;
+  border: solid;
+  border-color: black;
 }
 
 #top-box {
