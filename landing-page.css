@@ -1,0 +1,29 @@
+body {
+
+}
+
+.title {
+  text-align: center;
+}
+
+
+.main-content {
+  height: 400px;
+  width:100%;
+
+}
+img {
+  width:100%;
+  height:100%;
+  object-fit: contain;
+}
+
+.name-input-form {
+  height: 50px;
+  width:100px;
+  border-width: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+nav li {
+ display: inline;
+ margin-right: 15px;
+ list-style: none;
+}
+
+nav li a.current {
+ color: green;
+}
+
+a {
+ text-decoration: none;
+}
+
+[11:23]
+<link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="select-level.css">
