@@ -1,0 +1,51 @@
+.confirmation {
+  border: 1px solid black;
+  width: 50%;
+  height: 200px;
+  margin: 25px auto;
+}
+
+#results {
+  text-align: center;
+  margin: 65px auto;
+}
+
+.score {
+  /*border: 1px solid black;*/
+  width: 50%;
+  height: 200px;
+  margin: 100px auto auto auto;
+}
+
+#score-number {
+  text-align: center;
+}
+
+.link-box {
+  position: relative;
+  /*border: 1px solid black;*/
+  width: 50%;
+  height: 100px;
+  margin: 25px auto;
+}
+
+.links {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 40px;
+  width: 200px;
+  height: 50px;
+}
+
+#left-link {
+  /*margin: auto;*/
+  height: 50px;
+  width: 200px;
+  margin: 3% 8%;
+}
+
+#right-link {
+  margin: 3% 8%;
+}

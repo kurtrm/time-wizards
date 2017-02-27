@@ -1,0 +1,121 @@
+nav li {
+  display: inline;
+  margin-right: 15px;
+  list-style: none;
+}
+
+nav li a.current {
+  color: green;
+}
+
+a {
+  text-decoration: none;
+}
+
+.go-button {
+  display:inline-block;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 20%;
+  height: 40%;
+  border: solid;
+  border-color: black;
+
+}
+
+#top-box {
+  width: auto;
+  height: 200px;
+  margin: 20px;
+  border: solid;
+  border-color: blue;
+}
+
+/*this is where I had put the top-box-image id and replaced it with the image I wanted*/
+img {
+  display: inline-block;
+  width: 200px;
+  height: 175px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 0;
+  border: solid;
+  border-color: purple;
+}
+
+#top-box-text {
+  display: inline-block;
+  margin: 10px;
+  width: 60%;
+  height: 175px;
+  border: solid;
+  border-color: orange;
+}
+
+#center-box {
+  width: auto;
+  height: 200px;
+  margin: 20px;
+  border: solid;
+  border-color: blue;
+
+}
+
+#center-box-image {
+  display: inline-block;
+  width: 200px;
+  height: 175px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 0;
+  border: solid;
+  border-color: purple;
+}
+
+#center-box-text {
+  display: inline-block;
+  margin: 10px;
+  width: 60%;
+  height: 175px;
+  border: solid;
+  border-color: orange;
+}
+
+#bottom-box {
+  width: auto;
+  height: 200px;
+  border: solid;
+  margin: 20px;
+  border-color: blue;
+}
+
+#bottom-box-image {
+  display: inline-block;
+  width: 200px;
+  height: 175px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 0;
+  border: solid;
+  border-color: purple;
+}
+
+#bottom-box-text {
+  display: inline-block;
+  margin: 10px;
+  width: 60%;
+  height: 175px;
+  border: solid;
+  border-color: orange;
+}
+
+#footer {
+  width: 50%;
+  margin-left: 25%;
+  height: 100px;
+  border: solid;
+  border-color: yellow;
+}
