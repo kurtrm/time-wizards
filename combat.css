@@ -1,0 +1,24 @@
+* {
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.player-info, .historical-figure-info, .enemy-info {
+  display: inline-block;
+}
+
+nav li {
+ display: inline;
+ margin-right: 15px;
+ list-style: none;
+}
+
+nav li a.current {
+ color: green;
+}
+
+a {
+ text-decoration: none;
+}
