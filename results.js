@@ -2,7 +2,7 @@
 
 //TEST ARRAY: var results = ['Kurt', 75, false];
 
-var results = JSON.parse(localStorage.savedPlayerData);
+// var results = JSON.parse(localStorage./*savedPlayerData*/);
 
 
 //results will contain [name, score, boolean (win = true, lose = false)]

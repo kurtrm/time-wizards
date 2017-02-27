@@ -34,9 +34,13 @@
   border: 1px solid black;
   border-radius: 3px;
   text-align: center;
-  line-height: 40px;
+  line-height: 50px;
   width: 200px;
   height: 50px;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 #left-link {
