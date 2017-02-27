@@ -23,7 +23,7 @@
 
 .link-box {
   position: relative;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 50%;
   height: 100px;
   margin: 25px auto;
@@ -35,16 +35,17 @@
   border-radius: 3px;
   text-align: center;
   line-height: 40px;
+  width: 200px;
+  height: 50px;
 }
 
 #left-link {
-  margin: auto;
+  /*margin: auto;*/
   height: 50px;
   width: 200px;
-  margin: 18px 17px;
+  margin: 3% 8%;
 }
 
 #right-link {
-  height: 50px;
-  width: 200px;
+  margin: 3% 8%;
 }
