@@ -1,4 +1,4 @@
-'use-strict';
+'use strict';
 
 // This object defines the player.
 function Player (name, image, score) {
