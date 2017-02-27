@@ -1,0 +1,39 @@
+/** {
+  border: black 2px solid;
+}*/
+
+.credits-title {
+  border: 1px solid black;
+  width: 75%;
+  height: 200px;
+  margin: 25px auto;
+}
+
+#credits-heading {
+  text-align: center;
+  margin: 65px auto;
+}
+
+figure {
+  border: 1px solid black;
+  width: 75%;
+  height: 150px;
+  margin: 25px auto;
+}
+
+h4 {
+  width: 750px;
+}
+
+img {
+  display: inline-block;
+  font-size: 12px;
+  height: 100px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+figcaption {
+  display: inline-block;
+  width: 750px;
+}
