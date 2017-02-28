@@ -47,12 +47,28 @@ attackQuestions.append(attackQuestionThree);
 //==========DEFENSE QUESTIONS==========
 
 // 1 DEFENSE
-var defenseQuestionOneAnswerChoices = ['Of course!', 'Maybe', 'Probably not...', 'OH MY GOD KILL IT WITH FIRE!!!'];
+var defenseQuestionOneAnswerChoices = ['2001', '2007', '2015', '2005'];
 var defenseQuestionOne = new Question
-  ('Is Jar Jar a good character?',
+  ('What year did the iPhone come out?',
   defenseQuestionOneAnswerChoices,
-  3,
-  '...you\'re totally wrong...');
+  2,
+  '...Sorry! You\'re wrong. It was 2007...');
+defenseQuestions.append(defenseQuestionOne);
+
+var defenseQuestionTwoAnswerChoices = ['Britney Spears', 'Whitney Houston', 'Susan Sarandon', 'Sigourney Weaver'];
+var defenseQuestionTwo = new Question
+  ('What is the name of the female lead actress in the movie Alien?',
+  defenseQuestionTwoAnswerChoices,
+  4,
+  '...Oh no! You\'re wrong. It was Sigourney...');
+defenseQuestions.append(defenseQuestionOne);
+
+var defenseQuestionThreeAnswerChoices = ['J.K. Rowling', 'H.G. Wells', 'J.R. Tolkien', 'Michael Crichton'];
+var defenseQuestionThree = new Question
+  ('Which author wrote the books, Jurassic Park, which was adapted to a major motion picture film?',
+  defenseQuestionThreeAnswerChoices,
+  4,
+  '...Really? Come on. We made it easy. It was Michael Crichton.');
 defenseQuestions.append(defenseQuestionOne);
 
 //==========LOCATIONS==========
