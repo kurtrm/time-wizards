@@ -29,7 +29,9 @@ a {
 }
 
 figure {
+  position: relative;
   border: 1px solid black;
+  border-radius: 5px;
   width: 75%;
   height: 150px;
   margin: 25px auto;
@@ -43,11 +45,13 @@ img {
   display: inline-block;
   font-size: 12px;
   height: 100px;
-  margin-left: 20px;
-  margin-top: 25px;
+  margin: 25px;
 }
 
 figcaption {
+  text-indent: 25px;
+  position: absolute;
   display: inline-block;
-  width: 750px;
+  width: 75%;
+  margin-top: 15px;
 }

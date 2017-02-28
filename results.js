@@ -4,8 +4,8 @@
 
 var currentPlayer = JSON.parse(localStorage.currentPlayer);
 
-var winMessage = 'Great job. You have won the game!';
-var lossMessage = 'Oh no, you lost. Time is screwed up.';
+var winMessage = 'The robot is reassembled, and time has returned back to normal. Great job!';
+var lossMessage = 'You couldn\'t put the robot back together, and time is screwed up forever. Lucky for us, you can try again!';
 
 var headerEl = document.getElementById('results');
 
