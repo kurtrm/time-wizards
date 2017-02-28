@@ -8,6 +8,7 @@ var enemies = [];
 var historicalFigures = [];
 
 //==========ATTACK QUESTIONS==========
+
 // BLANK TEMPLATE
 // var attackQuestionOneAnswerChoices = [];
 // var attackQuestionOne = new Question
@@ -17,32 +18,65 @@ var historicalFigures = [];
 //   '');
 // attackQuestions.append(attackQuestionOne);
 
+//==========ATTACK EXAMPLE==========
+// 1
+// var attackQuestionOneAnswerChoices = ['Blue', 'Red', 'Green', 'Purple'];
+// var attackQuestionOne = new Question
+//   ('What is my favorite color?',
+//   attackQuestionOneAnswerChoices,
+//   2,
+//   'Nope! It\'s Green!');
+// attackQuestions.append(attackQuestionOne);
+
 // 1 ATTACK
-var attackQuestionOneAnswerChoices = ['Blue', 'Red', 'Green', 'Purple'];
+var attackQuestionOneAnswerChoices = ['Number', 'String', 'NaN', 'undefined'];
 var attackQuestionOne = new Question
-  ('What is my favorite color?',
+  ('What does the following expression return? typeof(NaN);',
   attackQuestionOneAnswerChoices,
-  2,
-  'Nope! It\'s Green!');
+  0,
+  'Number is the correct answer.');
 attackQuestions.append(attackQuestionOne);
 
+// 4. What does the following expression return?
+// typeof(NaN);
+//
+// Number *
+// String
+// NaN
+// undefined
+
 // 2 ATTACK
-var attackQuestionTwoAnswerChoices = ['12', '13', '10', '11'];
+var attackQuestionTwoAnswerChoices = ['False', 'True', 'Maybe', 'I don\’t know'];
 var attackQuestionTwo = new Question
-  ('How many items are in a baker\'s dozen?',
+  ('What does the following expression return? !false',
   attackQuestionTwoAnswerChoices,
   1,
-  'Nope! A dozen is 12, but a baker\'s dozen is adding one more to that.');
+  'The correct answer is true.');
 attackQuestions.append(attackQuestionTwo);
 
+// 2. What does the following expression return?
+// !false
+//
+// False
+// True *
+// Maybe
+// I don’t know.
+
 // 3 ATTACK
-var attackQuestionThreeAnswerChoices = ['1', '2', '3', '4'];
+var attackQuestionThreeAnswerChoices = ['rm branch pudding', 'rm -rf', 'git branch -d pudding', 'git checkout -b pudding'];
 var attackQuestionThree = new Question
-  ('How many legs does a dog normally have?',
+  ('How do you delete a branch called pudding?',
   attackQuestionThreeAnswerChoices,
   3,
-  'Nope! While some dogs lose a leg in acidents or are born different, they normally have four legs.');
+  'The correct answer is git branch -d pudding.');
 attackQuestions.append(attackQuestionThree);
+
+// 5. How do you delete a branch called pudding?
+//
+// rm branch pudding
+// rm -rf
+// git branch -d pudding *
+// git checkout -b pudding
 
 //==========DEFENSE QUESTIONS==========
 
@@ -55,6 +89,14 @@ var defenseQuestionOne = new Question
   '...Sorry! You\'re wrong. It was 2007...');
 defenseQuestions.append(defenseQuestionOne);
 
+// 2. What year did the iPhone come out?
+//
+// 2001
+// 2007*
+// 2015
+// 2005
+
+// 2 DEFENSE
 var defenseQuestionTwoAnswerChoices = ['Britney Spears', 'Whitney Houston', 'Susan Sarandon', 'Sigourney Weaver'];
 var defenseQuestionTwo = new Question
   ('What is the name of the female lead actress in the movie Alien?',
@@ -63,6 +105,14 @@ var defenseQuestionTwo = new Question
   '...Oh no! You\'re wrong. It was Sigourney...');
 defenseQuestions.append(defenseQuestionOne);
 
+// 4. What is the name of the female lead actress in the movie Alien?
+//
+// Britney Spears
+// Whitney Houston
+// Susan Sarandon
+// Sigourney Weaver *
+
+// 3 DEFENSE
 var defenseQuestionThreeAnswerChoices = ['J.K. Rowling', 'H.G. Wells', 'J.R. Tolkien', 'Michael Crichton'];
 var defenseQuestionThree = new Question
   ('Which author wrote the books, Jurassic Park, which was adapted to a major motion picture film?',
@@ -71,8 +121,34 @@ var defenseQuestionThree = new Question
   '...Really? Come on. We made it easy. It was Michael Crichton.');
 defenseQuestions.append(defenseQuestionOne);
 
+// 6.  Which author wrote the books, Jurassic Park, which was adapted to a major motion picture film?
+// J.K. Rowling
+// H.G. Wells
+// J.R. Tolkien
+// Michael Crichton *
+
 //==========LOCATIONS==========
+
+// Constructor looks like this.
+
+// This object defines the location (level).
+// function Location (name, image) {
+//   this.name = name || ''; // Sets default values if necessary.
+//   this.image = image || '';
+// }
 
 //==========HISTORICAL FIGURES==========
 
+// Constructor looks like this.
+
+// This object defines the historical figure.
+// function HistoricalFigure (comments) {
+//   this.comments = comments || []; // Sets default values if necessary.
+// }
+
 //==========ENEMIES==========
+
+// function Enemy (name, image) {
+//   this.name = name || ''; // Sets default values if necessary.
+//   this.image = image || '';
+// }
