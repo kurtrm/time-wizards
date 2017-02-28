@@ -41,3 +41,27 @@ label, input {
   text-align: none;
   display: block;
 }
+
+/*Attributes for buttons.*/
+
+button {
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    width: 25%;
+    min-width: 20%;
+    height: 50px;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #5acafa;
+    color: #b43b37;
+}
+
+button:hover {
+    background-color: #5acafa;
+    border-color: #5acafa;
+    color: #edc445;
+}
