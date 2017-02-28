@@ -7,6 +7,7 @@ var allNames = [];
 var nameInputEl = document.getElementById('name-form');
 nameInputEl.addEventListener('submit', handleSubmit);
 
+// Function to handle name submit events, brings user to next page
 function handleSubmit(event) {
   event.preventDefault();
   event.stopPropagation();
@@ -18,7 +19,7 @@ function handleSubmit(event) {
 
   saveToLocalStorage();
 }
-
+// functions to save and load from local storage
 function saveToLocalStorage (allNames) {
   localStorage.setItem('allNames', JSON.stringify(allNames));
 
