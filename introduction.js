@@ -1,5 +1,6 @@
 'use strict';
 
+//this block hides the div containers until user clicks on buttons
 var topBox = document.getElementById('button-one');
 var hideCenterBox = document.getElementById('center-box');
 hideCenterBox.style.visibility = 'hidden';
@@ -10,6 +11,7 @@ hideFooter.style.visibility = 'hidden';
 
 addEventListeners();
 
+//this function adds event click listeners to the buttons
 function addEventListeners () {
   var showCenterBox = document.getElementById('button-two');
   var showBottomBox = document.getElementById('button-three');
@@ -21,6 +23,7 @@ function addEventListeners () {
   console.log('event listeners added');
 }
 
+//the next four functions handle clicks for each individual button
 function handleClickTopBox (click) {
   event.preventDefault();
   event.stopPropagation();

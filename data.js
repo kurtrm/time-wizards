@@ -35,7 +35,7 @@ var attackQuestionOne = new Question
   attackQuestionOneAnswerChoices,
   0,
   'Number is the correct answer.');
-attackQuestions.append(attackQuestionOne);
+attackQuestions.push(attackQuestionOne);
 
 // 4. What does the following expression return?
 // typeof(NaN);
@@ -52,7 +52,7 @@ var attackQuestionTwo = new Question
   attackQuestionTwoAnswerChoices,
   1,
   'The correct answer is true.');
-attackQuestions.append(attackQuestionTwo);
+attackQuestions.push(attackQuestionTwo);
 
 // 2. What does the following expression return?
 // !false
@@ -69,7 +69,7 @@ var attackQuestionThree = new Question
   attackQuestionThreeAnswerChoices,
   3,
   'The correct answer is git branch -d pudding.');
-attackQuestions.append(attackQuestionThree);
+attackQuestions.push(attackQuestionThree);
 
 // 5. How do you delete a branch called pudding?
 //
@@ -87,7 +87,7 @@ var defenseQuestionOne = new Question
   defenseQuestionOneAnswerChoices,
   2,
   '...Sorry! You\'re wrong. It was 2007...');
-defenseQuestions.append(defenseQuestionOne);
+defenseQuestions.push(defenseQuestionOne);
 
 // 2. What year did the iPhone come out?
 //
@@ -103,7 +103,7 @@ var defenseQuestionTwo = new Question
   defenseQuestionTwoAnswerChoices,
   4,
   '...Oh no! You\'re wrong. It was Sigourney...');
-defenseQuestions.append(defenseQuestionOne);
+defenseQuestions.push(defenseQuestionOne);
 
 // 4. What is the name of the female lead actress in the movie Alien?
 //
@@ -119,7 +119,7 @@ var defenseQuestionThree = new Question
   defenseQuestionThreeAnswerChoices,
   4,
   '...Really? Come on. We made it easy. It was Michael Crichton.');
-defenseQuestions.append(defenseQuestionOne);
+defenseQuestions.push(defenseQuestionOne);
 
 // 6.  Which author wrote the books, Jurassic Park, which was adapted to a major motion picture film?
 // J.K. Rowling

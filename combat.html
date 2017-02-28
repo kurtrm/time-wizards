@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Fracture: Combat Page</title>
     <link rel="stylesheet" href="combat.css">
+    <script type="text/javascript" src="constructors.js"></script>
+      <script type="text/javascript" src="data.js"></script>
   </head>
   <body>
     <nav>
@@ -20,45 +22,45 @@
     <img class="location-image" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="location-image">
     <div class="character-info">
       <div class="player-info">
-        <h3 class="player-name">Player Name</h3>
-        <img class="player-image" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="player-image">
-        <p class="player-speech">Player Speech</p>
+        <h3 id="player-name">Player Name</h3>
+        <img id="player-image" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="player-image">
+        <p id="player-speech">Player Speech</p>
       </div>
       <div class="historical-figure-info">
-        <h3 class="historical-figure-name">Historical Figure Name</h3>
-        <img class="historical-figure-image" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="historical-figure-image">
-        <p class="historical-figure-speech">Historical Figure Speech</p>
+        <h3 id="historical-figure-name">Historical Figure Name</h3>
+        <img id="historical-figure-image" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="historical-figure-image">
+        <p id="historical-figure-speech">Historical Figure Speech</p>
       </div>
       <div class="enemy-info">
-        <h3 class="enemy-name">Enemy Name</h3>
-        <img class="enemy-image" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="enemy-image">
-        <p class="enemy-speech">Enemy Speech</p>
+        <h3 id="enemy-name">Enemy Name</h3>
+        <img id="enemy-image" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="enemy-image">
+        <p id="enemy-speech">Enemy Speech</p>
       </div>
     </div>
     <hr />
     <div class="question-block">
-      <p class="question">The question being asked.</p>
-      <form class="answer-choices">
+      <p id="question">The question being asked.</p>
+      <form id="answer-choices">
         <div>
           <input id="answer-choice-1-radio-button" class="answer-radio-button" type="radio" name="choices" value="0">
           <p id="answer-choice-1" class="answer-choice">Choice 1</p>
         </div>
         <div>
           <input id="answer-choice-2-radio-button" class="answer-radio-button" type="radio" name="choices" value="1">
-          <p id="answer-choice-1" class="answer-choice">Choice 2</p>
+          <p id="answer-choice-2" class="answer-choice">Choice 2</p>
         </div>
         <div>
           <input id="answer-choice-3-radio-button" class="answer-radio-button" type="radio" name="choices" value="2">
-          <p id="answer-choice-1" class="answer-choice">Choice 3</p>
+          <p id="answer-choice-3" class="answer-choice">Choice 3</p>
         </div>
         <div>
           <input id="answer-choice-4-radio-button" class="answer-radio-button" type="radio" name="choices" value="3">
-          <p id="answer-choice-1" class="answer-choice">Choice 4</p>
+          <p id="answer-choice-4" class="answer-choice">Choice 4</p>
         </div>
         <input id="submit-answer" type="button" value="Choose Answer">
       </form>
       <p id="answer-response">The response to the answer the player gave.</p>
     </div>
-    <script src="constructors.js" type="text/javascript"></script>
+    <script src="combat.js" type="text/javascript"></script>
   </body>
 </html>
