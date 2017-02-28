@@ -31,7 +31,11 @@ figure {
   border-radius: 5px;
   width: 75%;
   height: 150px;
-  margin: 25px auto;
+  margin: 15px auto;
+}
+
+h3 {
+  margin-left: 25px;
 }
 
 h4 {
@@ -52,4 +56,5 @@ figcaption {
   width: 75%;
   margin-top: 15px;
   font-family: 'Play', sans-serif;
+  color: white;
 }
