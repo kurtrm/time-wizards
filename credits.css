@@ -1,12 +1,6 @@
-nav li {
- display: inline;
- margin-right: 15px;
- list-style: none;
-}
-
-nav li a.current {
- color: green;
-}
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Play');
 
 a {
  text-decoration: none;
@@ -17,20 +11,23 @@ a {
 }*/
 
 .credits-title {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 75%;
-  height: 200px;
+  height: 100px;
   margin: 25px auto;
 }
 
 #credits-heading {
   text-align: center;
   margin: 65px auto;
+  font-size: 64px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 5px;
 }
 
 figure {
   position: relative;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   border-radius: 5px;
   width: 75%;
   height: 150px;
@@ -54,4 +51,5 @@ figcaption {
   display: inline-block;
   width: 75%;
   margin-top: 15px;
+  font-family: 'Play', sans-serif;
 }

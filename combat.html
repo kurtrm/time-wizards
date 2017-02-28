@@ -5,20 +5,9 @@
     <title>Fracture: Combat Page</title>
     <link rel="stylesheet" href="combat.css">
     <script type="text/javascript" src="constructors.js"></script>
-      <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="data.js"></script>
   </head>
   <body>
-    <nav>
-      <p>Temporary Navigation</p>
-      <ul>
-        <li><a href="landing-page.html">1. Landing Page</a></li>
-        <li><a href="introduction.html">2. Instruction Page</a></li>
-        <li><a href="select-level.html" class="current">3. Select Level Page</a></li>
-        <li><a href="combat.html">4. Combat Page</a></li>
-        <li><a href="results.html">5. Results Page</a></li>
-      </ul>
-    </nav>
-
     <img class="location-image" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="location-image">
     <div class="character-info">
       <div class="player-info">
@@ -42,22 +31,22 @@
       <p id="question">The question being asked.</p>
       <form id="answer-choices">
         <div>
-          <input id="answer-choice-1-radio-button" class="answer-radio-button" type="radio" name="choices" value="0">
+          <input class="answer-radio-button" type="radio" name="choices" value="0">
           <p id="answer-choice-1" class="answer-choice">Choice 1</p>
         </div>
         <div>
-          <input id="answer-choice-2-radio-button" class="answer-radio-button" type="radio" name="choices" value="1">
+          <input class="answer-radio-button" type="radio" name="choices" value="1">
           <p id="answer-choice-2" class="answer-choice">Choice 2</p>
         </div>
         <div>
-          <input id="answer-choice-3-radio-button" class="answer-radio-button" type="radio" name="choices" value="2">
+          <input class="answer-radio-button" type="radio" name="choices" value="2">
           <p id="answer-choice-3" class="answer-choice">Choice 3</p>
         </div>
         <div>
-          <input id="answer-choice-4-radio-button" class="answer-radio-button" type="radio" name="choices" value="3">
+          <input class="answer-radio-button" type="radio" name="choices" value="3">
           <p id="answer-choice-4" class="answer-choice">Choice 4</p>
         </div>
-        <input id="submit-answer" type="submit" value="Choose Answer">
+        <button id="submit-answer" type="submit" name="submitButton">Submit</button>
       </form>
       <p id="answer-response">The response to the answer the player gave.</p>
     </div>
