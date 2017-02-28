@@ -1,6 +1,6 @@
 'use strict';
 
-var topBox = document.getElementById('top-box');
+var topBox = document.getElementById('button-one');
 var hideCenterBox = document.getElementById('center-box');
 hideCenterBox.style.visibility = 'hidden';
 var hideBottomBox = document.getElementById('bottom-box');
@@ -11,9 +11,9 @@ hideFooter.style.visibility = 'hidden';
 addEventListeners();
 
 function addEventListeners () {
-  var showCenterBox = document.getElementById('center-box');
-  var showBottomBox = document.getElementById('bottom-box');
-  var showFooter = document.getElementById('footer-button');
+  var showCenterBox = document.getElementById('button-two');
+  var showBottomBox = document.getElementById('button-three');
+  var showFooter = document.getElementById('button-footer');
   topBox.addEventListener('click', handleClickTopBox);
   showCenterBox.addEventListener('click', handleClickCenterBox);
   showBottomBox.addEventListener('click', handleClickBottomBox);
@@ -43,4 +43,5 @@ function handleClickBottomBox (click) {
 function handleClickFooter (click) {
   event.preventDefault();
   event.stopPropagation();
+  document.location.href = 'select-level.html';
 }
