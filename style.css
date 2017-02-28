@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Play');
 
 /*This is the common stylesheet for colors, fonts, and various styling aspects across all pages.*/
 
@@ -10,17 +11,24 @@ body {
   color: white;
 }
 
+/*The title stuff.*/
 header {
   border: 10px solid #5acafa;
   color: #edc445;
-  font-family: 'Orbitron', serif;
+  font-family: 'Orbitron', sans-serif;
   /*text-shadow: 3px 2px 1px #f4f747;*/
   letter-spacing: 5px;
 }
 
+/*Default font color and font-family for text other than headings.*/
+p {
+  color: white;
+  font-family: 'Play', sans-serif;
+}
+
 /*Enter your name on the landing page.*/
 h3 {
-  font-family: 'Press Start 2P', serif;
+  font-family: 'Press Start 2P', sans-serif;
   color: #b43b37;
 }
 

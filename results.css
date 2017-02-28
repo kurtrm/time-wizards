@@ -1,19 +1,9 @@
-nav li {
- display: inline;
- margin-right: 15px;
- list-style: none;
-}
-
-nav li a.current {
- color: green;
-}
-
-a {
- text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Play');
 
 .confirmation {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 50%;
   height: 200px;
   margin: 25px auto;
@@ -22,6 +12,8 @@ a {
 #results {
   text-align: center;
   margin: 65px auto;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 64px;
 }
 
 .score {
@@ -47,17 +39,27 @@ a {
   position: absolute;
   display: inline-block;
   border: 1px solid black;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   line-height: 50px;
   width: 25%;
   min-width: 20%;
   height: 50px;
   text-decoration: none;
-  font-family: arial;
-  font-size: 36px;
+  font-family: 'Play', sans-serif;
+  font-size: 24px;
   font-weight: bold;
+  background-color: #5acafa;
+  color: #b43b37;
 }
+
+.links:hover {
+  background-color: #5acafa;
+  border-color: #5acafa;
+  color: #edc445;
+
+}
+
 
 #left-link {
   /*margin: auto;*/
