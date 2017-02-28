@@ -2,17 +2,29 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 @import url('https://fonts.googleapis.com/css?family=Play');
 
-/*This is the common stylesheet for colors, fonts, and various styling aspects across all pages.*/
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  /*text-align: center;*/
-  /*border: 10px solid black;*/
   background-color: #0f1f48;
-  color: white;
 }
 
 /*The title stuff.*/
 header {
+
+}
+
+h1 {
+  font-family: 'Orbitron', serif;
+  color: #edc445;
+  letter-spacing: 5px;
+}
+
+hr {
+  color: white;
+
   border: 10px solid #5acafa;
   color: #edc445;
   font-family: 'Orbitron', sans-serif;
@@ -32,14 +44,33 @@ h3 {
   color: #b43b37;
 }
 
+p {
+  font-family: 'Play', sans-serif;
+  color: white;
+}
+
+/*Still in progress here on ...*/
+
+/*header {
+  border: 10px solid #5acafa;
+  color: #edc445;
+  font-family: 'Orbitron', serif;
+  text-shadow: 3px 2px 1px #f4f747;
+  letter-spacing: 5px;
+}*/
+
+/*border: 10px solid #5acafa;*/
+/*text-shadow: 3px 2px 1px #f4f747;*/
+
+/*Enter your name on the landing page.*/
 /*Question heading*/
 h2 {
   color: #5acafa;
 }
 
-label, input {
-  text-align: none;
-  display: block;
+h3 {
+  font-family: 'Press Start 2P', serif;
+  color: #b43b37;
 }
 
 /*Attributes for buttons.*/
