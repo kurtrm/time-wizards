@@ -1,5 +1,5 @@
 'use strict';
-var radioButtons = [];
+
 
 // Selects a random question.
 function selectQuestion(questionType){
@@ -18,10 +18,10 @@ var selectedAttackQuestion = selectQuestion('attack');
 var questionEl = document.getElementById('question');
 questionEl.textContent = selectedAttackQuestion.question;
 
-for (var i = 0; i < 4; i++) {
-  var radioButton = document.getElementById('answer-choice-1' + 'answer-choice-2' + 'answer-choice-3' + 'answer-choice-4');
-  radioButtons.push(radioButtons);
-}
+var radioButtonOne = document.getElementById('answer-choice-1-radio-button');
+var radioButtonTwo = document.getElementById('answer-choice-2-radio-button');
+var radioButtonThree = document.getElementById('answer-choice-3-radio-button');
+var radioButtonFour = document.getElementById('answer-choice-4-radio-button');
 
 var answerChoiceOne = document.getElementById('answer-choice-1');
 answerChoiceOne.textContent = selectedAttackQuestion.answerChoices[0];
@@ -33,12 +33,12 @@ var answerChoiceFour = document.getElementById('answer-choice-4');
 answerChoiceFour.textContent = selectedAttackQuestion.answerChoices[3];
 
 var submitButtonEl = document.getElementById('submit-answer');
-submitButtonEl.addEventListener ('click', handleClick);
+submitButtonEl.addEventListener ('submit', handleSubmit);
 
-function handleClick(event){
+function handleSubmit(event){
   event.preventDefault();
   event.stopPropagation();
-  if(radioButtons[selectedAttackQuestion.correctAnswer].checked === true ){
+  event.target.id.checked === true ){
     console.log('correct answer selected');
   }
   else {
