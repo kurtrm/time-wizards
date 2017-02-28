@@ -67,7 +67,7 @@ var attackQuestionThreeAnswerChoices = ['rm branch pudding', 'rm -rf', 'git bran
 var attackQuestionThree = new Question
   ('How do you delete a branch called pudding?',
   attackQuestionThreeAnswerChoices,
-  3,
+  2,
   'The correct answer is git branch -d pudding.');
 attackQuestions.push(attackQuestionThree);
 
@@ -126,6 +126,15 @@ defenseQuestions.push(defenseQuestionOne);
 // H.G. Wells
 // J.R. Tolkien
 // Michael Crichton *
+
+//==========FINAL_QUESTION==========
+
+var finalQuestionAnswerChoices = ['Earth', 'Skaro', 'Mondas', 'Gallifrey'];
+var finalQuestion = new Question
+('In Doctor Who, what is the home planet of the Daleks?',
+finalQuestionAnswerChoices,
+1,
+'Turn on BBC right now...because that\'s wrong. It\'s Skaro');
 
 //==========LOCATIONS==========
 
