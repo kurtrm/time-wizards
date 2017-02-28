@@ -44,12 +44,14 @@ a {
 }
 
 .links {
+  position: absolute;
   display: inline-block;
   border: 1px solid black;
   border-radius: 3px;
   text-align: center;
   line-height: 50px;
-  width: 200px;
+  width: 25%;
+  min-width: 20%;
   height: 50px;
   text-decoration: none;
   font-family: arial;
@@ -59,11 +61,9 @@ a {
 
 #left-link {
   /*margin: auto;*/
-  height: 50px;
-  width: 200px;
   margin: 3% 8%;
 }
 
 #right-link {
-  margin: 3% 8%;
+  margin: 3% 64%;
 }
