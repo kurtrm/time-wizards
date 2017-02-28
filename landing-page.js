@@ -11,7 +11,7 @@ function handleSubmit(event) {
   event.preventDefault();
   event.stopPropagation();
   var fullname = event.target.inputName.value;
-  // document.location.href = 'introduction.html';
+  document.location.href = 'introduction.html';
   allNames.push(fullname);
 
   console.log(allNames);
