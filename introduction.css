@@ -12,6 +12,18 @@ a {
   text-decoration: none;
 }
 
+#button-one {
+}
+
+#button-two {
+  position: absolute;
+}
+
+#button-three {
+  position: absolute;
+}
+
+
 .go-button {
   display:inline-block;
   margin-bottom: 2%;
@@ -20,6 +32,7 @@ a {
   height: 40%;
   border: solid;
   border-color: black;
+  float: right;
 }
 
 .go-button-two {
@@ -30,6 +43,7 @@ a {
   height: 40%;
   border: solid;
   border-color: black;
+  float: right;
 }
 
 .go-button-three {
@@ -40,6 +54,7 @@ a {
   height: 40%;
   border: solid;
   border-color: black;
+  float: right;
 }
 
 #top-box {
@@ -66,10 +81,11 @@ img {
 #top-box-text {
   display: inline-block;
   margin: 10px;
-  width: 60%;
+  width: 50%;
   height: 175px;
   border: solid;
   border-color: orange;
+  position: absolute;
 }
 
 #center-box {
@@ -96,10 +112,11 @@ img {
 #center-box-text {
   display: inline-block;
   margin: 10px;
-  width: 60%;
+  width: 50%;
   height: 175px;
   border: solid;
   border-color: orange;
+  position: absolute;
 }
 
 #bottom-box {
@@ -125,10 +142,11 @@ img {
 #bottom-box-text {
   display: inline-block;
   margin: 10px;
-  width: 60%;
+  width: 50%;
   height: 175px;
   border: solid;
   border-color: orange;
+  position: absolute;
 }
 
 #footer {
