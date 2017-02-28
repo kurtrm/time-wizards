@@ -22,3 +22,7 @@ nav li a.current {
 a {
  text-decoration: none;
 }
+
+.answer-choice, .answer-radio-button {
+  display: inline-block;
+}
