@@ -155,4 +155,6 @@ historicalFigures.push(einstein);
 
 //==========ENEMIES==========
 
-var trex = new Enemy ('');
+var trex = new Enemy ('T-rex', 'images/trex.jpg', 'RAWWWRRRRR!!!');
+console.log(trex);
+enemies.push[trex];
