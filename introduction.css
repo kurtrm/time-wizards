@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+
 nav li {
   display: inline;
   margin-right: 15px;
@@ -12,48 +17,104 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: #0f1f48;
+  margin-top: 30px;
+}
+
+/*Fracture title container*/
+header {
+  height: 50px;
+  /*background-color: green;*/
+  padding: 30px;
+}
+
+/*Yellow CAPS Fracture heading.*/
+h1 {
+  font-family: 'Orbitron', serif;
+  color: #edc445;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Play', sans-serif;
+  color: white;
+}
+
 #button-one {
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  font-family: 'Play', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #5acafa;
+  color: #b43b37;
+}
+
+#button-one:hover {
+    background-color: #5acafa;
+    border-color: #5acafa;
+    color: #edc445;
 }
 
 #button-two {
-  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  font-family: 'Play', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #5acafa;
+  color: #b43b37;
+}
+
+#button-two:hover {
+    background-color: #5acafa;
+    border-color: #5acafa;
+    color: #edc445;
 }
 
 #button-three {
-  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  font-family: 'Play', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #5acafa;
+  color: #b43b37;
 }
 
+#button-three:hover {
+    background-color: #5acafa;
+    border-color: #5acafa;
+    color: #edc445;
+}
 
 .go-button {
   display:inline-block;
   margin-bottom: 2%;
-  margin-top: 2%;
+  margin-top: 5%;
+  margin-right: 0;
+  margin-left: 10%;
   width: 20%;
   height: 40%;
-  border: solid;
-  border-color: black;
-  float: right;
-}
-
-.go-button-two {
-  display:inline-block;
-  margin-bottom: 2%;
-  margin-top: 2%;
-  width: 20%;
-  height: 40%;
-  border: solid;
-  border-color: black;
-  float: right;
-}
-
-.go-button-three {
-  display:inline-block;
-  margin-bottom: 2%;
-  margin-top: 2%;
-  width: 20%;
-  height: 40%;
-  border: solid;
-  border-color: black;
+  /*border: solid;
+  border-color: black;*/
   float: right;
 }
 
@@ -61,8 +122,8 @@ a {
   width: auto;
   height: 200px;
   margin: 20px;
-  border: solid;
-  border-color: blue;
+  /*border: solid;
+  border-color: blue;*/
 }
 
 /*this is where I had put the top-box-image id and replaced it with the image I wanted*/
@@ -83,8 +144,8 @@ img {
   margin: 10px;
   width: 50%;
   height: 175px;
-  border: solid;
-  border-color: orange;
+  /*border: solid;
+  border-color: orange;*/
   position: absolute;
 }
 
@@ -92,8 +153,8 @@ img {
   width: auto;
   height: 200px;
   margin: 20px;
-  border: solid;
-  border-color: blue;
+  /*border: solid;
+  border-color: blue;*/
 
 }
 
@@ -114,17 +175,17 @@ img {
   margin: 10px;
   width: 50%;
   height: 175px;
-  border: solid;
-  border-color: orange;
+  /*border: solid;
+  border-color: orange;*/
   position: absolute;
 }
 
 #bottom-box {
   width: auto;
   height: 200px;
-  border: solid;
   margin: 20px;
-  border-color: blue;
+  /*border: solid;*/
+  /*border-color: blue;*/
 }
 
 #bottom-box-image {
@@ -144,8 +205,8 @@ img {
   margin: 10px;
   width: 50%;
   height: 175px;
-  border: solid;
-  border-color: orange;
+  /*border: solid;
+  border-color: orange;*/
   position: absolute;
 }
 
@@ -153,6 +214,30 @@ img {
   width: 50%;
   margin-left: 25%;
   height: 100px;
-  border: solid;
-  border-color: yellow;
+  /*border: solid;
+  border-color: yellow;*/
+}
+
+#button-footer {
+  margin-top: 0;
+  margin-right: 5%;
+  margin-left: 30%;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  font-family: 'Play', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #5acafa;
+  color: #b43b37;
+}
+
+#button-footer:hover{
+    background-color: #5acafa;
+    border-color: #5acafa;
+    color: #edc445;
 }
