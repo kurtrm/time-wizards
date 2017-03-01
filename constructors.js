@@ -5,6 +5,7 @@ function Player (name, image, score) {
   this.name = name || ''; // Sets default values if necessary.
   this.image = image || '';
   this.score = score || 0;
+  this.win = false;
 }
 
 //Example to add new instance.
