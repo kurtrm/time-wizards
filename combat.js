@@ -17,53 +17,58 @@ function selectQuestion(questionType){
 
 // Handles the submit button being clicked in the form.
 function handleSubmit(event){
-  validSubmit = true;
   event.preventDefault();
   event.stopPropagation();
 
-  if(finalQuestionOfGame){
-    // If player got it right, they win.
-    // If player got it right, add +1 to score.
-    // If player got it wrong, they lose.
-    // Sends player to the results page.
-    document.location.href = 'results.html';
-  }
+  // Only allows the logic to proceed if the player already submitted an answer.
+  if(!validSubmit && event.target.choices.value === NaN){
+    validSubmit = true;
 
-  if(currentRound <= roundsPerEncounter){
-    // Check if answer is correct.
-    if(parseInt(event.target.choices.value) === selectedQuestion.correctAnswer){
-      answerResponseEl.textContent = 'That is correct! Nice job!';
-      // Add +1 to player score.
-    }else {
-      answerResponseEl.textContent = selectedQuestion.incorrectAnswerResponse;
+    if(finalQuestionOfGame){
+      // If player got it right, they win.
+      // If player got it right, add +1 to score.
+      // If player got it wrong, they lose.
+      // Sends player to the results page.
+      document.location.href = 'results.html';
     }
 
-    // The last round.
-    if(currentRound === roundsPerEncounter){
-      // Change text of button.
-      submitButtonEl.textContent = 'Proceed';
-      // The player can now leave the encounter.
-      exitEncounter = true;
-    }
-  }else{
-    // Ensure button will send player to select level.
-    if(exitEncounter){
-      document.location.href = 'select-level.html';
+    if(currentRound <= roundsPerEncounter){
+      // Check if answer is correct.
+      if(parseInt(event.target.choices.value) === selectedQuestion.correctAnswer){
+        answerResponseEl.textContent = 'That is correct! Nice job!';
+        // Add +1 to player score.
+      }else {
+        answerResponseEl.textContent = selectedQuestion.incorrectAnswerResponse;
+      }
+
+      // The last round.
+      if(currentRound === roundsPerEncounter){
+        // Change text of button.
+        submitButtonEl.textContent = 'Proceed';
+        // The player can now leave the encounter.
+        exitEncounter = true;
+      }
+    }else{
+      // Ensure button will send player to select level.
+      if(exitEncounter){
+        document.location.href = 'select-level.html';
+      }
     }
   }
 }
 
-var validSubmit = false;
-
+// Handles the "Go to Next Question" button being clicked in the form.
 function handleNextQuestionClick () {
   if (validSubmit){
   // Increment currentRound.
     currentRound += 1;
     // Create the next round.
     encounterRound();
+    // Reset validSumbit for next round.
     validSubmit = false;
+
+    answerResponseEl.textContent = '';
   }
-  console.log('You\'ve hit the next question button! Yippy!');
 }
 
 // Creates a new round.
@@ -105,6 +110,8 @@ var roundsPerEncounter = 3;
 var currentRound = 1;
 // The question for this round.
 var selectedQuestion;
+// Will be true if the player has made a submission during that round.
+var validSubmit = false;
 
 // Element containing the text of the question being asked.
 var questionEl = document.getElementById('question');
