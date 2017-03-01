@@ -139,7 +139,7 @@ finalQuestionAnswerChoices,
 //==========LOCATIONS==========
 var japan = new Location ('Japan Year 1185', 'images/japansmall.jpg');
 console.log(japan);
-locations.push[japan];
+locations.push(japan);
 
 //==========HISTORICAL FIGURES==========
 
@@ -152,4 +152,4 @@ historicalFigures.push(einstein);
 
 var trex = new Enemy ('T-rex', 'images/trex.jpg', 'RAWWWRRRRR!!!');
 console.log(trex);
-enemies.push[trex];
+enemies.push(trex);

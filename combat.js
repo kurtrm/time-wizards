@@ -17,8 +17,9 @@ function selectQuestion(questionType){
 
 // Selects a random enemy.
 function selectEnemy(){
-  var enemyIndex = Math.floor(Math.random() * enemies.length);
-  return enemies[enemyIndex];
+  //var enemyIndex = Math.floor(Math.random() * enemies.length);
+  console.log(enemies[0]);
+  return enemies[0];
 }
 
 // Handles the submit button being clicked in the form.
@@ -114,11 +115,12 @@ function encounterRound(){
 // Loads the information needed for the combat phase of the game.
 function loadLocalStorage(){
   // Load location.
-  location = JSON.parse(localStorage.getItem('location'));
+  scene = JSON.parse(localStorage.getItem('scene'));
   // Load player.
   player = JSON.parse(localStorage.getItem('player'));
   // Load historical figure.
   historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
+  console.log(historicalFigure);
 }
 
 // Saves the information needed for the select-level and results page.
@@ -145,7 +147,7 @@ var selectedQuestion;
 var validSubmit = false;
 
 // The current instances the encounter will be dealing with.
-var location;
+var scene;
 var player;
 var historicalFigure;
 var enemy = selectEnemy();
@@ -170,34 +172,34 @@ nextButtonEl.addEventListener('click', handleNextQuestionClick);
 
 // The first round starts automatically.
 encounterRound();
-//loadLocalStorage();
+loadLocalStorage();
 
 //DOM functionality for location
 // var locationNameEl = document.getElementById('location-name');
 // locationNameEl.textContent = (japan.name);
 var locationImageEl = document.getElementById('location-image');
-locationImageEl.setAttribute('src', japan.image);
+locationImageEl.setAttribute('src', scene.image);
 
 //DOM functionality for player
-// var playerNameEl = document.getElementById('player-name');
-// playerNameEl.textContent = (currentplayer.name);
-// var playerImageEl = document.getElementById('player-image');
-// playerImageEl.setAttribute('src', currentplayer.image);
-// var playerSpeechEl = document.getElementById('player-speech');
-// playerSpeechEl.textContent = (currentplayer.speech);
+var playerNameEl = document.getElementById('player-name');
+playerNameEl.textContent = (player.name);
+var playerImageEl = document.getElementById('player-image');
+playerImageEl.setAttribute('src', player.image);
+var playerSpeechEl = document.getElementById('player-speech');
+playerSpeechEl.textContent = (player.speech);
 
 //DOM functionality for historical figure
 var historicalFigureNameEl = document.getElementById('historical-figure-name');
-historicalFigureNameEl.textContent = (einstein.name);
+historicalFigureNameEl.textContent = (historicalFigure.name);
 var historicalFigureSpeechEl = document.getElementById('historical-figure-speech');
-historicalFigureSpeechEl.textContent = (einstein.comments);
+historicalFigureSpeechEl.textContent = (historicalFigure.comments);
 var historicalFigureImageEl = document.getElementById('historical-figure-image');
-historicalFigureImageEl.setAttribute('src', einstein.image[1]);
+historicalFigureImageEl.setAttribute('src', historicalFigure.image[1]);
 
 //DOM functionality for enemy
 var enemyNameEl = document.getElementById('enemy-name');
-enemyNameEl.textContent = (trex.name);
+enemyNameEl.textContent = (enemy.name);
 var enemyImageEl = document.getElementById('enemy-image');
-enemyImageEl.setAttribute('src', trex.image);
+enemyImageEl.setAttribute('src', enemy.image);
 var enemySpeechEl = document.getElementById('enemy-speech');
-enemySpeechEl.textContent = (trex.speech);
+enemySpeechEl.textContent = (enemy.speech);
