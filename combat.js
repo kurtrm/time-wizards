@@ -31,20 +31,29 @@ function handleSubmit(event){
   if(!validSubmit && isNaN(parseInt(event.target.choices.value)) !== true){
     validSubmit = true;
 
+    // If the player just answered the final question of the game.
     if(finalQuestionOfGame){
-      // If player got it right, they win.
-      // If player got it right, add +1 to score.
-      // If player got it wrong, they lose.
-      // Sends player to the results page.
-      saveLocalStorage();
-      document.location.href = 'results.html';
+      // Check if answer is correct.
+      if(parseInt(event.target.choices.value) === selectedQuestion.correctAnswer){
+        answerResponseEl.textContent = 'That is correct! You fixed the robot!';
+        player.score += 1;
+        player.win = true;
+
+        saveLocalStorage();
+        document.location.href = 'results.html';
+      }else {
+        player.win = false;
+
+        saveLocalStorage();
+        document.location.href = 'results.html';
+      }
     }
 
     if(currentRound <= roundsPerEncounter){
       // Check if answer is correct.
       if(parseInt(event.target.choices.value) === selectedQuestion.correctAnswer){
         answerResponseEl.textContent = 'That is correct! Nice job!';
-        // Add +1 to player score.
+        player.score += 1;
       }else {
         answerResponseEl.textContent = selectedQuestion.incorrectAnswerResponse;
       }
