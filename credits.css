@@ -34,6 +34,10 @@ figure {
   margin: 25px auto;
 }
 
+h3 {
+  margin-left: 25px;
+}
+
 h4 {
   width: 750px;
 }
@@ -52,4 +56,34 @@ figcaption {
   width: 75%;
   margin-top: 15px;
   font-family: 'Play', sans-serif;
+  color: white;
+}
+
+.links {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  width: 15%;
+  min-width: 20%;
+  height: 50px;
+  text-decoration: none;
+  font-family: 'Play', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #5acafa;
+  color: #b43b37;
+}
+
+.links:hover {
+  background-color: #5acafa;
+  border-color: #5acafa;
+  color: #edc445;
+
+}
+
+footer {
+  margin-top: 50px;
 }
