@@ -28,7 +28,7 @@ function Enemy (name, image, speech) {
 };
 
 // This object defines the location (level).
-function Location (name, image) {
+function Scene (name, image) {
   this.name = name || ''; // Sets default values if necessary.
   this.image = image || '';
 }
