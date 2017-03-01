@@ -6,6 +6,7 @@ function Player (name, image, score) {
   this.image = image || '';
   this.score = score || 0;
   this.win = false;
+  this.speech = speech || '';
 }
 
 //Example to add new instance.
@@ -20,9 +21,10 @@ function HistoricalFigure (name, comments, intro, image) {
   this.image = image;
 }
 // This object defines the enemy.
-function Enemy (name, image) {
+function Enemy (name, image, speech) {
   this.name = name || ''; // Sets default values if necessary.
   this.image = image || '';
+  this.speech = speech || [];
 };
 
 // This object defines the location (level).

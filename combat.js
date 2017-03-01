@@ -169,8 +169,15 @@ nextButtonEl.addEventListener('click', handleNextQuestionClick);
 // The first round starts automatically.
 encounterRound();
 
-//DOM functionality for historical figure
+//DOM functionality for player
+var playerNameEl = document.getElementById('player-name');
+playerNameEl.textContent = (currentplayer.name);
+var playerImageEl = document.getElementById('player-image');
+playerImageEl.setAttribute('src', currentplayer.image);
+var playerSpeechEl = document.getElementById('player-speech');
+playerSpeechEl.textContent = (currentplayer.speech);
 
+//DOM functionality for historical figure
 var historicalFigureNameEl = document.getElementById('historical-figure-name');
 historicalFigureNameEl.textContent = (einstein.name);
 var historicalFigureSpeechEl = document.getElementById('historical-figure-speech');
@@ -181,3 +188,9 @@ historicalFigureImageEl.setAttribute('src', einstein.image[1]);
 //DOM functionality for player
 
 //DOM functionality for enemy
+var enemyNameEl = document.getElementById('enemy-name');
+enemyNameEl.textContent = (trex.name);
+var enemyImageEl = document.getElementById('enemy-image');
+enemyImageEl.setAttribute('src', trex.image);
+var enemySpeechEl = document.getElementById('enemy-speech');
+enemySpeechEl.textContent = (trex.speech);
