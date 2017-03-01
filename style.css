@@ -2,79 +2,90 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 @import url('https://fonts.googleapis.com/css?family=Play');
 
+/*Style reset.*/
 * {
   margin: 0;
   padding: 0;
 }
 
+/*Page background.*/
 body {
   background-color: #0f1f48;
+  margin-top: 30px;
 }
 
-/*The title stuff.*/
+/*Where all containers live.*/
+#content {
+  /*background-color: grey;*/
+  width: 80%;
+  margin: 30px auto 0px auto;
+}
+
+/*Fracture title container*/
 header {
-
+  height: 50px;
+  /*background-color: green;*/
+  padding: 30px;
 }
 
+/*Where all the main content lives*/
+article {
+  padding: 30px;
+}
+
+/*Optional footer.*/
+footer {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  margin-top: 15px;
+  padding: 5%;
+}
+
+/*Default font style and color.*/
+p {
+  font-family: 'Play', sans-serif;
+  color: white;
+}
+
+/*Yellow CAPS Fracture heading.*/
 h1 {
   font-family: 'Orbitron', serif;
   color: #edc445;
   letter-spacing: 5px;
+  text-align: center;
 }
 
-hr {
-  color: white;
-
-  border: 10px solid #5acafa;
-  color: #edc445;
-  font-family: 'Orbitron', sans-serif;
-  /*text-shadow: 3px 2px 1px #f4f747;*/
-  letter-spacing: 5px;
+/*Light blue name title in game*/
+h2 {
+  color: #5acafa;
 }
 
-/*Default font color and font-family for text other than headings.*/
-p {
-  color: white;
-  font-family: 'Play', sans-serif;
-}
-
-/*Enter your name on the landing page.*/
+/*Red CAPS enter your name on the landing page.*/
 h3 {
   font-family: 'Press Start 2P', sans-serif;
   color: #b43b37;
 }
 
-p {
+/*Used for credits page text.*/
+figcaption {
+  text-indent: 25px;
+  position: absolute;
+  display: inline-block;
+  width: 75%;
+  margin-top: 15px;
   font-family: 'Play', sans-serif;
   color: white;
 }
 
-/*Still in progress here on ...*/
-
-/*header {
+/*Light blue image border.*/
+img .border-outline {
   border: 10px solid #5acafa;
-  color: #edc445;
-  font-family: 'Orbitron', serif;
-  text-shadow: 3px 2px 1px #f4f747;
-  letter-spacing: 5px;
-}*/
-
-/*border: 10px solid #5acafa;*/
-/*text-shadow: 3px 2px 1px #f4f747;*/
-
-/*Enter your name on the landing page.*/
-/*Question heading*/
-h2 {
-  color: #5acafa;
-}
-
-h3 {
-  font-family: 'Press Start 2P', serif;
-  color: #b43b37;
 }
 
 /*Attributes for buttons.*/
-
 button {
     border: 1px solid black;
     border-radius: 5px;
@@ -96,3 +107,15 @@ button:hover {
     border-color: #5acafa;
     color: #edc445;
 }
+
+/*White horizontal line under h1.*/
+hr {
+  color: white;
+}
+
+/*Optional copyright in footer.*/
+/*#copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #4A4A4A;
+}*/
