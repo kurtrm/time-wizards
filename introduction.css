@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 
 
-nav li {
+/*nav li {
   display: inline;
   margin-right: 15px;
   list-style: none;
@@ -16,7 +16,7 @@ nav li a.current {
 
 a {
   text-decoration: none;
-}
+}*/
 
 body {
   background-color: #0f1f48;
