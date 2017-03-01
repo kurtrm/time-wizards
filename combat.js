@@ -126,3 +126,18 @@ nextButtonEl.addEventListener('click', handleNextQuestionClick);
 
 // The first round starts automatically.
 encounterRound();
+
+//DOM functionality for historical figure
+
+var historicalFigureNameEl = document.getElementById('historical-figure-name');
+historicalFigureNameEl.textContent = (einstein.name);
+var historicalFigureSpeechEl = document.getElementById('historical-figure-speech');
+historicalFigureSpeechEl.textContent = (einstein.comments);
+var historicalFigureImageEl = document.getElementById('historical-figure-image');
+historicalFigureImageEl.setAttribute('src', einstein.image[1]);
+
+//DOM functionality for player
+
+
+
+//DOM functionality for enemy
