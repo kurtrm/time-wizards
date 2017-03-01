@@ -12,15 +12,18 @@ function Player (name, image, score) {
 // console.log(playerOne);
 
 // This object defines the historical figure.
-function HistoricalFigure (comments) {
+function HistoricalFigure (name, comments, intro, image) {
+  this.name = name;
   this.comments = comments || []; // Sets default values if necessary.
+  this.intro = intro;
+  this.image = image;
 }
 
 // This object defines the enemy.
 function Enemy (name, image) {
   this.name = name || ''; // Sets default values if necessary.
   this.image = image || '';
-}
+};
 
 // This object defines the location (level).
 function Location (name, image) {
