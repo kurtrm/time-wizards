@@ -35,6 +35,7 @@ function handleSubmit(event){
       // If player got it right, add +1 to score.
       // If player got it wrong, they lose.
       // Sends player to the results page.
+      saveLocalStorage();
       document.location.href = 'results.html';
     }
 
@@ -59,6 +60,7 @@ function handleSubmit(event){
     }else{
       // Ensure button will send player to select level.
       if(exitEncounter){
+        saveLocalStorage();
         document.location.href = 'select-level.html';
       }
     }
@@ -168,6 +170,7 @@ nextButtonEl.addEventListener('click', handleNextQuestionClick);
 
 // The first round starts automatically.
 encounterRound();
+//loadLocalStorage();
 
 //DOM functionality for player
 var playerNameEl = document.getElementById('player-name');
