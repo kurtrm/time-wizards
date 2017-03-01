@@ -19,9 +19,13 @@ function selectQuestion(questionType){
 function handleSubmit(event){
   event.preventDefault();
   event.stopPropagation();
+  console.log(parseInt(event.target.choices.value));
+  if(isNaN(parseInt(event.target.choices.value)) === true){
+    console.log('Is NaN');
+  }
 
   // Only allows the logic to proceed if the player already submitted an answer.
-  if(!validSubmit && event.target.choices.value === NaN){
+  if(!validSubmit && isNaN(parseInt(event.target.choices.value)) !== true){
     validSubmit = true;
 
     if(finalQuestionOfGame){
@@ -58,7 +62,7 @@ function handleSubmit(event){
 }
 
 // Handles the "Go to Next Question" button being clicked in the form.
-function handleNextQuestionClick () {
+function handleNextQuestionClick(){
   if (validSubmit){
   // Increment currentRound.
     currentRound += 1;
