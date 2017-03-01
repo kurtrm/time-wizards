@@ -15,6 +15,12 @@ function selectQuestion(questionType){
   }
 }
 
+// Selects a random enemy.
+function selectEnemy(){
+  var enemyIndex = Math.floor(Math.random() * enemies.length);
+  return enemies[enemyIndex];
+}
+
 // Handles the submit button being clicked in the form.
 function handleSubmit(event){
   event.preventDefault();
@@ -29,6 +35,7 @@ function handleSubmit(event){
       // If player got it right, add +1 to score.
       // If player got it wrong, they lose.
       // Sends player to the results page.
+      saveLocalStorage();
       document.location.href = 'results.html';
     }
 
@@ -53,6 +60,7 @@ function handleSubmit(event){
     }else{
       // Ensure button will send player to select level.
       if(exitEncounter){
+        saveLocalStorage();
         document.location.href = 'select-level.html';
       }
     }
@@ -103,6 +111,22 @@ function encounterRound(){
   answerChoiceFour.textContent = selectedQuestion.answerChoices[3];
 }
 
+// Loads the information needed for the combat phase of the game.
+function loadLocalStorage(){
+  // Load location.
+  location = JSON.parse(localStorage.getItem('location'));
+  // Load player.
+  player = JSON.parse(localStorage.getItem('player'));
+  // Load historical figure.
+  historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
+}
+
+// Saves the information needed for the select-level and results page.
+function saveLocalStorage(){
+  // Save player.
+  localStorage.setItem('player', JSON.stringify(player));
+}
+
 // Will be true if the player gets one question correct in the encounter.
 var survivedEncounter = false;
 // Will be true when the submit button changes into a proceed button.
@@ -119,6 +143,12 @@ var currentRound = 1;
 var selectedQuestion;
 // Will be true if the player has made a submission during that round.
 var validSubmit = false;
+
+// The current instances the encounter will be dealing with.
+var location;
+var player;
+var historicalFigure;
+var enemy = selectEnemy();
 
 // Element containing the text of the question being asked.
 var questionEl = document.getElementById('question');
@@ -140,9 +170,23 @@ nextButtonEl.addEventListener('click', handleNextQuestionClick);
 
 // The first round starts automatically.
 encounterRound();
+//loadLocalStorage();
+
+//DOM functionality for location
+// var locationNameEl = document.getElementById('location-name');
+// locationNameEl.textContent = (japan.name);
+var locationImageEl = document.getElementById('location-image');
+locationImageEl.setAttribute('src', japan.image);
+
+//DOM functionality for player
+// var playerNameEl = document.getElementById('player-name');
+// playerNameEl.textContent = (currentplayer.name);
+// var playerImageEl = document.getElementById('player-image');
+// playerImageEl.setAttribute('src', currentplayer.image);
+// var playerSpeechEl = document.getElementById('player-speech');
+// playerSpeechEl.textContent = (currentplayer.speech);
 
 //DOM functionality for historical figure
-
 var historicalFigureNameEl = document.getElementById('historical-figure-name');
 historicalFigureNameEl.textContent = (einstein.name);
 var historicalFigureSpeechEl = document.getElementById('historical-figure-speech');
@@ -150,8 +194,10 @@ historicalFigureSpeechEl.textContent = (einstein.comments);
 var historicalFigureImageEl = document.getElementById('historical-figure-image');
 historicalFigureImageEl.setAttribute('src', einstein.image[1]);
 
-//DOM functionality for player
-
-
-
 //DOM functionality for enemy
+var enemyNameEl = document.getElementById('enemy-name');
+enemyNameEl.textContent = (trex.name);
+var enemyImageEl = document.getElementById('enemy-image');
+enemyImageEl.setAttribute('src', trex.image);
+var enemySpeechEl = document.getElementById('enemy-speech');
+enemySpeechEl.textContent = (trex.speech);

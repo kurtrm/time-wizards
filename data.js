@@ -137,14 +137,9 @@ finalQuestionAnswerChoices,
 'Turn on BBC right now...because that\'s wrong. It\'s Skaro');
 
 //==========LOCATIONS==========
-
-// Constructor looks like this.
-
-// This object defines the location (level).
-// function Location (name, image) {
-//   this.name = name || ''; // Sets default values if necessary.
-//   this.image = image || '';
-// }
+var japan = new Location ('Japan Year 1185', 'images/japansmall.jpg');
+console.log(japan);
+locations.push[japan];
 
 //==========HISTORICAL FIGURES==========
 
@@ -155,4 +150,6 @@ historicalFigures.push(einstein);
 
 //==========ENEMIES==========
 
-var trex = new Enemy ('');
+var trex = new Enemy ('T-rex', 'images/trex.jpg', 'RAWWWRRRRR!!!');
+console.log(trex);
+enemies.push[trex];

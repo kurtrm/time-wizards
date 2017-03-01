@@ -3,7 +3,8 @@
 var nameInputEl = document.getElementById('name-form');
 nameInputEl.addEventListener('submit', handleSubmit);
 
-var player = new Player();
+//This section adds text data for the player
+var currentplayer = new Player (name, image, score);
 
 // Function to handle name submit events, brings user to next page
 function handleSubmit(event) {
