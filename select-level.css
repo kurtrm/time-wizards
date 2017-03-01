@@ -1,35 +1,39 @@
-
-/*#content {
-  border-style: solid;
-  border-color: black;
-  width: 65%;
-  margin: auto;
-}*/
+/*Historical Figure Container*/
 
 #historical-figure {
-  border-style: solid;
+  float: left;
+  width: 60%;
+  /*width: 100%;
+  overflow: auto;*/
+  margin-left: 20%;
+  margin-right: 15%;
+  /*margin: auto;*/
+  margin-bottom: 5%;
+  padding: 15px;
+  /*border-style: solid;
   border-color: blue;
+  background-color: navy;*/
 }
 
 #historical-image {
+  float: left;
   width: 100px;
   height: 100px;
-  background-color: grey;
-  margin: 15px;
-  float: left;
-  /*display: inline-block;*/
+  margin-right: 30px;
+  /*background-color: grey;*/
 }
 
 #historical-text {
-  /*border-style: solid;*/
-  border-color: pink;
-  margin-left: 130px;
-  margin-right: 15px;
+  float: left;
+  width: 60%;
+  margin-top: 2%;
+  /*border-style: solid;
+  border-color: pink;*/
 }
 
 #location-image-box {
-  border-style: solid;
-  border-color: green;
+  /*border-style: solid;
+  border-color: green;*/
   margin: auto;
 }
 
@@ -46,6 +50,22 @@
 #location-image:hover { background: url(images/landscape.jpg)
 }
 
+h3 a {
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: #edc445;
+  text-decoration: none;
+}
+
+h3 a:visited {
+  color: #b43b37;
+  /*color: #5acafa; blue*/
+  text-decoration: none;
+}
+
 #location-text {
-  text-align: center
+  margin-top: 30px;
+  text-align: center;
 }
