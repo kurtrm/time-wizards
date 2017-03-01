@@ -19,7 +19,6 @@ function HistoricalFigure (name, comments, intro, image) {
   this.intro = intro;
   this.image = image;
 }
-
 // This object defines the enemy.
 function Enemy (name, image) {
   this.name = name || ''; // Sets default values if necessary.
