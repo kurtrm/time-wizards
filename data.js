@@ -149,7 +149,7 @@ finalQuestionAnswerChoices,
 //==========HISTORICAL FIGURES==========
 
 // This object defines the historical figure.
-var einstein = new HistoricalFigure ('Albert MF Einstein', ['You do not really understand something unless you can explain it to your grandmother.', 'It is a miracle that curiosity survives formal education.'], 'Yell E=MC2 as you jump into the portal!', ['images/albert.jpg', 'images/einstein2.jpg']);
+var einstein = new HistoricalFigure ('Albert MF Einstein', ['You do not really understand something unless you can explain it to your grandmother.', 'It is a miracle that curiosity survives formal education.'], 'Hello friend, my name is Albert and I’m here to assist you. Please click on a portal below to begin your journey to fix time. Yell E=MC2 as you jump into the portal!', ['images/albert.jpg', 'images/einstein2.jpg']);
 console.log(einstein);
 historicalFigures.push(einstein);
 
