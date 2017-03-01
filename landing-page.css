@@ -1,22 +1,17 @@
-
-.title {
+#fractured {
   text-align: center;
-  font-size: 48px;
+  margin-bottom: 15px;
 }
 
-
-.main-content {
-  height: 400px;
-  width:100%;
-
-}
 img {
-  width:100%;
-  height:100%;
-  object-fit: contain;
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: auto;
 }
 
 .name-input-form {
+  background-color: green;
   height: 50px;
   width:100px;
   border-width: 2px;
@@ -24,4 +19,12 @@ img {
   margin-right: auto;
   display: inline;
   text-align: center;
+}
+
+#name-form {
+  /*background-color: green;*/
+}
+
+#name-input {
+  margin-bottom: 20px;
 }

@@ -12,6 +12,7 @@
 body {
   background-color: #0f1f48;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /*Where all containers live.*/
@@ -34,7 +35,7 @@ article {
 }
 
 /*Optional footer.*/
-footer {
+/*footer {
   position: absolute;
   top: 90%;
   width: 100%;
@@ -42,7 +43,7 @@ footer {
   background-color: black;
   margin-top: 15px;
   padding: 5%;
-}
+}*/
 
 /*Default font style and color.*/
 p {
@@ -74,14 +75,14 @@ figcaption {
   text-indent: 25px;
   position: absolute;
   display: inline-block;
-  width: 75%;
+  width: 50%;
   margin-top: 15px;
   font-family: 'Play', sans-serif;
   color: white;
 }
 
 /*Light blue image border.*/
-img .border-outline {
+img.border-outline {
   border: 10px solid #5acafa;
 }
 

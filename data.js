@@ -148,23 +148,11 @@ finalQuestionAnswerChoices,
 
 //==========HISTORICAL FIGURES==========
 
-// Constructor looks like this.
-
 // This object defines the historical figure.
-function HistoricalFigure (comments) {
-  this.comments = comments || []; // Sets default values if necessary.
-  this.intro = intro;
-  this.image = image;
-
-}
-// This section appends Historical Figure introduction to the select-level page
-var historicalFigureIntroEl = document.getElementById('historical-text');
-
-
+var einstein = new HistoricalFigure ('Albert MF Einstein', ['You do not really understand something unless you can explain it to your grandmother.', 'It is a miracle that curiosity survives formal education.'], 'Yell E=MC2 as you jump into the portal!', ['images/albert.jpg', 'images/einstein2.jpg']);
+console.log(einstein);
+historicalFigures.push(einstein);
 
 //==========ENEMIES==========
 
-// function Enemy (name, image) {
-//   this.name = name || ''; // Sets default values if necessary.
-//   this.image = image || '';
-// }
+var trex = new Enemy ('');
