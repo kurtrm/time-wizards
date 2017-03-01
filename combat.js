@@ -70,8 +70,17 @@ function handleSubmit(event){
     }else{
       // Ensure button will send player to select level.
       if(exitEncounter){
-        saveLocalStorage();
-        document.location.href = 'select-level.html';
+        // The player loses if they didn't gain any points this encounter.
+        if(scoreAtEncounterStart === player.score){
+          // The player loses.
+          player.win = false;
+          saveLocalStorage();
+          document.location.href = 'results.html';
+        }else{
+          // The player moves onward.
+          saveLocalStorage();
+          document.location.href = 'select-level.html';
+        }
       }
     }
   }
@@ -127,6 +136,7 @@ function loadLocalStorage(){
   scene = JSON.parse(localStorage.getItem('scene'));
   // Load player.
   player = JSON.parse(localStorage.getItem('player'));
+  scoreAtEncounterStart = player.score;
   // Load historical figure.
   historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
   console.log(historicalFigure);
@@ -138,8 +148,6 @@ function saveLocalStorage(){
   localStorage.setItem('player', JSON.stringify(player));
 }
 
-// Will be true if the player gets one question correct in the encounter.
-var survivedEncounter = false;
 // Will be true when the submit button changes into a proceed button.
 var exitEncounter = false;
 // Will be true if this current round will be an attack.
@@ -150,6 +158,8 @@ var finalQuestionOfGame = false;
 var roundsPerEncounter = 3;
 // The round the player is currently on.
 var currentRound = 1;
+// The score the player starts with at the beginning of the encounter.
+var scoreAtEncounterStart;
 // The question for this round.
 var selectedQuestion;
 // Will be true if the player has made a submission during that round.
