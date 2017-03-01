@@ -37,14 +37,6 @@ var attackQuestionOne = new Question
   'Number is the correct answer.');
 attackQuestions.push(attackQuestionOne);
 
-// 4. What does the following expression return?
-// typeof(NaN);
-//
-// Number *
-// String
-// NaN
-// undefined
-
 // 2 ATTACK
 var attackQuestionTwoAnswerChoices = ['False', 'True', 'Maybe', 'I don\’t know'];
 var attackQuestionTwo = new Question
@@ -53,14 +45,6 @@ var attackQuestionTwo = new Question
   1,
   'Sorry! The correct answer is true.');
 attackQuestions.push(attackQuestionTwo);
-
-// 2. What does the following expression return?
-// !false
-//
-// False
-// True *
-// Maybe
-// I don’t know.
 
 // 3 ATTACK
 var attackQuestionThreeAnswerChoices = ['rm branch pudding', 'rm -rf', 'git branch -d pudding', 'git checkout -b pudding'];
