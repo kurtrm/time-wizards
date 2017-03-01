@@ -15,6 +15,12 @@ function selectQuestion(questionType){
   }
 }
 
+// Selects a random enemy.
+function selectEnemy(){
+  var enemyIndex = Math.floor(Math.random() * enemies.length);
+  return enemies[enemyIndex];
+}
+
 // Handles the submit button being clicked in the form.
 function handleSubmit(event){
   event.preventDefault();
@@ -103,6 +109,22 @@ function encounterRound(){
   answerChoiceFour.textContent = selectedQuestion.answerChoices[3];
 }
 
+// Loads the information needed for the combat phase of the game.
+function loadLocalStorage(){
+  // Load location.
+  location = JSON.parse(localStorage.getItem('location'));
+  // Load player.
+  player = JSON.parse(localStorage.getItem('player'));
+  // Load historical figure.
+  historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
+}
+
+// Saves the information needed for the select-level and results page.
+function saveLocalStorage(){
+  // Save player.
+  localStorage.setItem('player', JSON.stringify(player));
+}
+
 // Will be true if the player gets one question correct in the encounter.
 var survivedEncounter = false;
 // Will be true when the submit button changes into a proceed button.
@@ -119,6 +141,12 @@ var currentRound = 1;
 var selectedQuestion;
 // Will be true if the player has made a submission during that round.
 var validSubmit = false;
+
+// The current instances the encounter will be dealing with.
+var location;
+var player;
+var historicalFigure;
+var enemy = selectEnemy();
 
 // Element containing the text of the question being asked.
 var questionEl = document.getElementById('question');
@@ -151,7 +179,5 @@ var historicalFigureImageEl = document.getElementById('historical-figure-image')
 historicalFigureImageEl.setAttribute('src', einstein.image[1]);
 
 //DOM functionality for player
-
-
 
 //DOM functionality for enemy
