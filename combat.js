@@ -21,7 +21,7 @@ function handleSubmit(event){
   event.stopPropagation();
 
   // Only allows the logic to proceed if the player already submitted an answer.
-  if(!validSubmit && event.target.choices.value === NaN){
+  if(!validSubmit && isNaN(parseInt(event.target.choices.value)) !== true){
     validSubmit = true;
 
     if(finalQuestionOfGame){
@@ -47,6 +47,8 @@ function handleSubmit(event){
         submitButtonEl.textContent = 'Proceed';
         // The player can now leave the encounter.
         exitEncounter = true;
+        validSubmit = false;
+        currentRound += 1;
       }
     }else{
       // Ensure button will send player to select level.
@@ -58,9 +60,14 @@ function handleSubmit(event){
 }
 
 // Handles the "Go to Next Question" button being clicked in the form.
-function handleNextQuestionClick () {
+function handleNextQuestionClick(event){
   if (validSubmit){
-  // Increment currentRound.
+    // Remove this button on the second to last round being completed.
+    if(currentRound === roundsPerEncounter - 1){
+      event.target.remove();
+    }
+
+    // Increment currentRound.
     currentRound += 1;
     // Create the next round.
     encounterRound();
