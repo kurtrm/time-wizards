@@ -17,6 +17,7 @@ function selectQuestion(questionType){
 
 // Handles the submit button being clicked in the form.
 function handleSubmit(event){
+  validSubmit = true;
   event.preventDefault();
   event.stopPropagation();
 
@@ -43,19 +44,26 @@ function handleSubmit(event){
       submitButtonEl.textContent = 'Proceed';
       // The player can now leave the encounter.
       exitEncounter = true;
-    }else{
-      // Create the next round.
-      encounterRound();
     }
-
-    // Increment currentRound.
-    currentRound += 1;
   }else{
     // Ensure button will send player to select level.
     if(exitEncounter){
       document.location.href = 'select-level.html';
     }
   }
+}
+
+var validSubmit = false;
+
+function handleNextQuestionClick () {
+  if (validSubmit){
+  // Increment currentRound.
+    currentRound += 1;
+    // Create the next round.
+    encounterRound();
+    validSubmit = false;
+  }
+  console.log('You\'ve hit the next question button! Yippy!');
 }
 
 // Creates a new round.
@@ -110,8 +118,11 @@ var answerFormEl = document.getElementById('answer-choices');
 answerFormEl.addEventListener('submit', handleSubmit);
 // Element containing the text of the answer response.
 var answerResponseEl = document.getElementById('answer-response');
-// The button for the submittion.
+// The button for the submission.
 var submitButtonEl = document.getElementById('submit-answer');
+// The button for the next question.
+var nextButtonEl = document.getElementById('next-question');
+nextButtonEl.addEventListener('click', handleNextQuestionClick);
 
 // The first round starts automatically.
 encounterRound();

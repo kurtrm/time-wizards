@@ -51,7 +51,7 @@ var attackQuestionTwo = new Question
   ('What does the following expression return? !false',
   attackQuestionTwoAnswerChoices,
   1,
-  'The correct answer is true.');
+  'Sorry! The correct answer is true.');
 attackQuestions.push(attackQuestionTwo);
 
 // 2. What does the following expression return?
@@ -85,7 +85,7 @@ var defenseQuestionOneAnswerChoices = ['2001', '2007', '2015', '2005'];
 var defenseQuestionOne = new Question
   ('What year did the iPhone come out?',
   defenseQuestionOneAnswerChoices,
-  2,
+  1,
   '...Sorry! You\'re wrong. It was 2007...');
 defenseQuestions.push(defenseQuestionOne);
 
@@ -101,7 +101,7 @@ var defenseQuestionTwoAnswerChoices = ['Britney Spears', 'Whitney Houston', 'Sus
 var defenseQuestionTwo = new Question
   ('What is the name of the female lead actress in the movie Alien?',
   defenseQuestionTwoAnswerChoices,
-  4,
+  3,
   '...Oh no! You\'re wrong. It was Sigourney...');
 defenseQuestions.push(defenseQuestionOne);
 
@@ -117,7 +117,7 @@ var defenseQuestionThreeAnswerChoices = ['J.K. Rowling', 'H.G. Wells', 'J.R. Tol
 var defenseQuestionThree = new Question
   ('Which author wrote the books, Jurassic Park, which was adapted to a major motion picture film?',
   defenseQuestionThreeAnswerChoices,
-  4,
+  3,
   '...Really? Come on. We made it easy. It was Michael Crichton.');
 defenseQuestions.push(defenseQuestionOne);
 
