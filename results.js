@@ -2,7 +2,10 @@
 
 //TEST ARRAY: var results = ['Kurt', 75, false];
 
+localStorage.recordedPlayers += localStorage.currentPlayer;
 var currentPlayer = JSON.parse(localStorage.currentPlayer);
+recordedPlayers += currentPlayer;
+JSON.stringify(localStorage.recordedPlayers);
 
 var winMessage = 'The robot is reassembled, and time has returned back to normal. Great job!';
 var lossMessage = 'You couldn\'t put the robot back together, and time is screwed up forever. Lucky for us, you can try again!';
