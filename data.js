@@ -151,9 +151,16 @@ finalQuestionAnswerChoices,
 // Constructor looks like this.
 
 // This object defines the historical figure.
-// function HistoricalFigure (comments) {
-//   this.comments = comments || []; // Sets default values if necessary.
-// }
+function HistoricalFigure (comments) {
+  this.comments = comments || []; // Sets default values if necessary.
+  this.intro = intro;
+  this.image = image;
+
+}
+// This section appends Historical Figure introduction to the select-level page
+var historicalFigureIntroEl = document.getElementById('historical-text');
+
+
 
 //==========ENEMIES==========
 
