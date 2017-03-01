@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 @import url('https://fonts.googleapis.com/css?family=Play');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 
 
 nav li {
@@ -37,7 +38,17 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  margin: 0;
+  color: #5acafa;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 5px;
+  font-size: 30px;
+
+}
+
 p {
+  margin-top: 2%;
   font-family: 'Play', sans-serif;
   color: white;
 }
@@ -142,6 +153,7 @@ img {
 #top-box-text {
   display: inline-block;
   margin: 10px;
+  margin-left: 30px;
   width: 50%;
   height: 175px;
   /*border: solid;
@@ -173,6 +185,7 @@ img {
 #center-box-text {
   display: inline-block;
   margin: 10px;
+  margin-left: 30px;
   width: 50%;
   height: 175px;
   /*border: solid;
@@ -203,6 +216,7 @@ img {
 #bottom-box-text {
   display: inline-block;
   margin: 10px;
+  margin-left: 30px;
   width: 50%;
   height: 175px;
   /*border: solid;
