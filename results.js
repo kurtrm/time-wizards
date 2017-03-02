@@ -19,14 +19,17 @@ var lossMessage = 'You couldn\'t put the robot back together, and time is screwe
 var headerEl = document.getElementById('results');
 var imgEl = document.getElementById('results-image');
 
-//If the player wins, the Player.score attribute is set to true. It is false otherwise.
+//If the player wins, the player.score attribute is set to true. It is false otherwise.
+//Display the robot and the winMessage if win is true.
 if (player.win === true) {
   headerEl.innerHTML = winMessage;
   imgEl.src = 'images/Cartoon-Robot-300px.png';
   imgEl.alt = 'Fixed Robot';
+//Otherwise, leave the current images. The innerHTML is left below for posterity.
 } else {
   headerEl.innerHTML = lossMessage;
 }
 
+//Display the score, pulled from local storage.
 var scoreEl = document.getElementById('score-number');
 scoreEl.innerHTML = 'Score: ' + player.score;

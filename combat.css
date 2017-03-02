@@ -47,6 +47,7 @@ a {
 label {
   font-family: 'Play', sans-serif;
   color: white;
+  font-size: 24px;
 }
 
 .answer-radio-button {
