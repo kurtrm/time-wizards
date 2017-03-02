@@ -19,6 +19,7 @@ body {
 
 /*Where all containers live.*/
 #content {
+  overflow: auto;
   /*background-color: grey;*/
   width: 90%;
   margin: 30px auto 0px auto;
