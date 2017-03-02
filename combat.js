@@ -33,8 +33,14 @@ function handleSubmit(event){
   event.preventDefault();
   event.stopPropagation();
 
+  // If player doesn't submit an answer, alert user to submit an answer.
+  if(isNaN(parseInt(event.target.choices.value)) === true) {
+    alert('Please select an answer before submitting.');
+  }
+
   // Only allows the logic to proceed if the player already submitted an answer.
   if(!validSubmit && isNaN(parseInt(event.target.choices.value)) !== true){
+    alert('Please select an answer before submitting.');
     validSubmit = true;
 
     // If the player just answered the final question of the game.
