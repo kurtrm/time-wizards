@@ -200,37 +200,37 @@ locations.push(japan);
 // locations.push(japan);
 
 // RELATIVE FILE PATHS
-// levels300sq/levels-sq-med-astronaut.jpg
-// levels300sq/levels-sq-med-castle.jpg
-// levels300sq/levels-sq-med-desert-orange.jpg
-// levels300sq/levels-sq-med-desert-yellow.jpg
-// levels300sq/levels-sq-med-field-tree.jpg
-// levels300sq/levels-sq-med-field.jpg
-// levels300sq/levels-sq-med-japan-temple.jpg
-// levels300sq/levels-sq-med-mountain.jpg
-// levels300sq/levels-sq-med-mt-rainier-day.jpg
-// levels300sq/levels-sq-med-mt-rainier-distance.jpg
-// levels300sq/levels-sq-med-mt-rainier-sunset.jpg
-// levels300sq/levels-sq-med-night-stars.jpg
-// levels300sq/levels-sq-med-space-station.jpg
-// levels300sq/levels-sq-med-spaceship.jpg
-// levels300sq/levels-sq-med-volcano.jpg
+// images/levels300sq/levels-sq-med-astronaut.jpg
+// images/levels300sq/levels-sq-med-castle.jpg
+// images/levels300sq/levels-sq-med-desert-orange.jpg
+// images/levels300sq/levels-sq-med-desert-yellow.jpg
+// images/levels300sq/levels-sq-med-field-tree.jpg
+// images/levels300sq/levels-sq-med-field.jpg
+// images/levels300sq/levels-sq-med-japan-temple.jpg
+// images/levels300sq/levels-sq-med-mountain.jpg
+// images/levels300sq/levels-sq-med-mt-rainier-day.jpg
+// images/levels300sq/levels-sq-med-mt-rainier-distance.jpg
+// images/levels300sq/levels-sq-med-mt-rainier-sunset.jpg
+// images/levels300sq/levels-sq-med-night-stars.jpg
+// images/levels300sq/levels-sq-med-space-station.jpg
+// images/levels300sq/levels-sq-med-spaceship.jpg
+// images/levels300sq/levels-sq-med-volcano.jpg
 
-// levels150sq/levels-sq-sm-astronaut.jpg
-// levels150sq/levels-sq-sm-castle.jpg
-// levels150sq/levels-sq-sm-desert-orange.jpg
-// levels150sq/levels-sq-sm-desert-yellow.jpg
-// levels150sq/levels-sq-sm-field-tree.jpg
-// levels150sq/levels-sq-sm-field.jpg
-// levels150sq/levels-sq-sm-japan-temple.jpg
-// levels150sq/levels-sq-sm-mountain.jpg
-// levels150sq/levels-sq-sm-mt-rainier-day.jpg
-// levels150sq/levels-sq-sm-mt-rainier-distance.jpg
-// levels150sq/levels-sq-sm-mt-rainier-sunset.jpg
-// levels150sq/levels-sq-sm-night-stars.jpg
-// levels150sq/levels-sq-sm-space-station.jpg
-// levels150sq/levels-sq-sm-spaceship.jpg
-// levels150sq/levels-sq-sm-volcano.jpg
+// images/levels150sq/levels-sq-sm-astronaut.jpg
+// images/levels150sq/levels-sq-sm-castle.jpg
+// images/levels150sq/levels-sq-sm-desert-orange.jpg
+// images/levels150sq/levels-sq-sm-desert-yellow.jpg
+// images/levels150sq/levels-sq-sm-field-tree.jpg
+// images/levels150sq/levels-sq-sm-field.jpg
+// images/levels150sq/levels-sq-sm-japan-temple.jpg
+// images/levels150sq/levels-sq-sm-mountain.jpg
+// images/levels150sq/levels-sq-sm-mt-rainier-day.jpg
+// images/levels150sq/levels-sq-sm-mt-rainier-distance.jpg
+// images/levels150sq/levels-sq-sm-mt-rainier-sunset.jpg
+// images/levels150sq/levels-sq-sm-night-stars.jpg
+// images/levels150sq/levels-sq-sm-space-station.jpg
+// images/levels150sq/levels-sq-sm-spaceship.jpg
+// images/levels150sq/levels-sq-sm-volcano.jpg
 
 //==========HISTORICAL FIGURES==========
 
@@ -239,15 +239,15 @@ var einstein = new HistoricalFigure ('Albert MF Einstein', ['You do not really u
 console.log(einstein);
 historicalFigures.push(einstein);
 
-var bigfoot = new HistoricalFigure ('Bigfoot', ['', ''], '', ['figures300sq/figures-sq-med-bigfoot.jpg', '']);
+var bigfoot = new HistoricalFigure ('Bigfoot', ['', ''], '', ['images/figures300sq/figures-sq-med-bigfoot.jpg', '']);
 console.log(bigfoot);
 historicalFigures.push(bigfoot);
 
-var darwin = new HistoricalFigure ('Charles Darwin', ['', ''], '', ['figures300sq/figures-sq-med-darwin-front.jpg', '']);
+var darwin = new HistoricalFigure ('Charles Darwin', ['', ''], '', ['images/figures300sq/figures-sq-med-darwin-front.jpg', '']);
 console.log(darwin);
 historicalFigures.push(darwin);
 
-var elizabeth = new HistoricalFigure ('Queen Elizabeth', ['', ''], '', ['figures300sq/figures-sq-med-queen-hat.jpg', '']);
+var elizabeth = new HistoricalFigure ('Queen Elizabeth', ['', ''], '', ['images/figures300sq/figures-sq-med-queen-hat.jpg', '']);
 console.log(elizabeth);
 historicalFigures.push(elizabeth);
 
@@ -259,14 +259,14 @@ historicalFigures.push(elizabeth);
 // historicalFigures.push(bigfoot);
 
 // RELATIVE FILE PATHS
-// figures300sq/figures-sq-med-darwin-side.jpg
-// figures300sq/figures-sq-med-queen-crown.jpg
+// images/figures300sq/figures-sq-med-darwin-side.jpg
+// images/figures300sq/figures-sq-med-queen-crown.jpg
 
-// figures150sq/figures-sq-sm-bigfoot.jpg
-// figures150sq/figures-sq-sm-darwin-front.jpg
-// figures150sq/figures-sq-sm-darwin-side.jpg
-// figures150sq/figures-sq-sm-queen-crown.jpg
-// figures150sq/figures-sq-sm-queen-hat.jpg
+// images/figures150sq/figures-sq-sm-bigfoot.jpg
+// images/figures150sq/figures-sq-sm-darwin-front.jpg
+// images/figures150sq/figures-sq-sm-darwin-side.jpg
+// images/figures150sq/figures-sq-sm-queen-crown.jpg
+// images/figures150sq/figures-sq-sm-queen-hat.jpg
 
 //==========ENEMIES==========
 
@@ -274,19 +274,19 @@ var trex = new Enemy ('T-rex', 'images/trex.jpg', 'RAWWWRRRRR!!!');
 console.log(trex);
 enemies.push(trex);
 
-var plesiosaur = new Enemy ('Nessie Plesiosaur', 'monsters300sq/monsters-sq-med-dinosaur.jpg', 'RAWWWRRRRR!!!');
+var plesiosaur = new Enemy ('Nessie Plesiosaur', 'images/monsters300sq/monsters-sq-med-dinosaur.jpg', 'RAWWWRRRRR!!!');
 console.log(plesiosaur);
 enemies.push(plesiosaur);
 
-var hitler = new Enemy ('Adolf Hitler', 'monsters300sq/monsters-sq-med-hitler.jpg', 'Narp');
+var hitler = new Enemy ('Adolf Hitler', 'images/monsters300sq/monsters-sq-med-hitler.jpg', 'Narp!');
 console.log(hitler);
 enemies.push(hitler);
 
-var kim = new Enemy ('Kim Jong-un', 'monsters300sq/monsters-sq-med-kim.jpg', 'Missiles');
+var kim = new Enemy ('Kim Jong-un', 'images/monsters300sq/monsters-sq-med-kim.jpg', 'Launch!');
 console.log(kim);
 enemies.push(kim);
 
-var robotLady = new Enemy ('Robot Lady', 'monsters300sq/monsters-sq-med-robot-lady.jpg', 'Wat');
+var robotLady = new Enemy ('Robot Lady', 'images/monsters300sq/monsters-sq-med-robot-lady.jpg', 'Wat?');
 console.log(robotLady);
 enemies.push(robotLady);
 
@@ -299,7 +299,7 @@ enemies.push(robotLady);
 
 // RELATIVE FILE PATHS
 
-// monsters150sq/monsters-sq-sm-dinosaur.jpg
-// monsters150sq/monsters-sq-sm-hitler.jpg
-// monsters150sq/monsters-sq-sm-kim.jpg
-// monsters150sq/monsters-sq-sm-robot-lady.jpg
+// images/monsters150sq/monsters-sq-sm-dinosaur.jpg
+// images/monsters150sq/monsters-sq-sm-hitler.jpg
+// images/monsters150sq/monsters-sq-sm-kim.jpg
+// images/monsters150sq/monsters-sq-sm-robot-lady.jpg
