@@ -5,8 +5,13 @@
 .confirmation {
   /*border: 1px solid black;*/
   width: 100%;
-  height: 200px;
+  height: 800px;
   margin: 25px auto;
+  text-align: center;
+}
+
+#results-image {
+  margin-top: 100px;
 }
 
 #results {
@@ -29,7 +34,6 @@
 }
 
 .link-box {
-  position: relative;
   /*border: 1px solid black;*/
   width: 50%;
   height: 100px;
@@ -37,7 +41,6 @@
 }
 
 .links {
-  position: absolute;
   display: inline-block;
   border: 1px solid black;
   border-radius: 5px;
@@ -64,9 +67,8 @@
 
 #left-link {
   /*margin: auto;*/
-  margin: 3% 8%;
 }
 
 #right-link {
-  margin: 3% 64%;
+  float: right;
 }

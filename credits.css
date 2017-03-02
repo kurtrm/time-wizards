@@ -43,6 +43,7 @@ h4 {
 }
 
 img {
+  border: 10px solid #5acafa;
   display: inline-block;
   font-size: 12px;
   height: 100px;
