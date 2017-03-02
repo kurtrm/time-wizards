@@ -55,13 +55,61 @@ var attackQuestionThree = new Question
   'The correct answer is git branch -d pudding.');
 attackQuestions.push(attackQuestionThree);
 
-// 5. How do you delete a branch called pudding?
-//
-// rm branch pudding
-// rm -rf
-// git branch -d pudding *
-// git checkout -b pudding
+// 4 ATTACK
+var attackQuestionFourAnswerChoices = ['expletives', 'variable', 'location', 'var'];
+var attackQuestionFour = new Question
+('What variable name should NOT be used in Javascript?',
+attackQuestionFourAnswerChoices,
+2,
+'The correct answer is location.');
+attackQuestions.push(attackQuestionFour);
 
+// 5 ATTACK
+var attackQuestionFiveAnswerChoices = ['You look like a lonely variable, I\'d like to assign you as mine!', 'If I call your function name, will you return me your phone number?', 'Are you an Object constuctor? Because I want to build a relationship with you!', 'ALL OF THE ABOVE'];
+var attackQuestionFive = new Question
+('Which of the following is the cheesiest Javascript line?',
+attackQuestionFiveAnswerChoices,
+3,
+'The correct answer is ALL OF THE ABOVE.');
+attackQuestions.push(attackQuestionFive);
+
+//6 ATTACK
+var attackQuestionSixAnswerChoices = ['Packed data sets can not be processed differently.', 'Shared memory or thread level parallelism allow different parallel paths on multiple data', 'It returns a selection mask with API vectors', 'Typed arrays split implementation into buffers and views'];
+var attackQuestionSix = new Question
+('What is the downside of Single Instruction/Multiple data methods?',
+attackQuestionSixAnswerChoices,
+0,
+'The correct answer is packed data sets can not be processed differently');
+attackQuestions.push(attackQuestionSix);
+
+//7 ATTACK
+var attackQuestionSevenAnswerChoices = ['In the body section at the bottom', 'In your meta tag section', 'In the body section at the top','In your head section'];
+var attackQuestionSeven = new Question
+('Where is it best to put a CDN JavaScript reference in your HTML file?',
+attackQuestionSevenAnswerChoices,
+3,
+'The correct answer is in your head section');
+attackQuestions.push(attackQuestionSeven);
+
+//8 ATTACK
+var attackQuestionEightAnswerChoices = ['meow.txt touch', 'mkdir meow.txt', 'touch meow.txt', 'meow meow meow meow'];
+var attackQuestionEight = new Question
+('In Bash, how do you make new text file named meow?',
+attackQuestionEightAnswerChoices,
+2,
+'The correct answer is touch meow.txt');
+attackQuestions.push(attackQuestionEight);
+
+//9 ATTACK
+var attackQuestionNineAnswerChoices = ['style this.list', 'list-style-type', 'type-style-list','list-decoration'];
+var attackQuestionNine = new Question
+('How do you change the style of an unordered list in CSS?',
+attackQuestionNineAnswerChoices,
+1,
+'The correct answer is list-style-type');
+attackQuestions.push(attackQuestionNine);
+
+console.log(attackQuestions);
 //==========DEFENSE QUESTIONS==========
 
 // 1 DEFENSE
@@ -73,13 +121,6 @@ var defenseQuestionOne = new Question
   '...Sorry! You\'re wrong. It was 2007...');
 defenseQuestions.push(defenseQuestionOne);
 
-// 2. What year did the iPhone come out?
-//
-// 2001
-// 2007*
-// 2015
-// 2005
-
 // 2 DEFENSE
 var defenseQuestionTwoAnswerChoices = ['Britney Spears', 'Whitney Houston', 'Susan Sarandon', 'Sigourney Weaver'];
 var defenseQuestionTwo = new Question
@@ -89,13 +130,6 @@ var defenseQuestionTwo = new Question
   '...Oh no! You\'re wrong. It was Sigourney...');
 defenseQuestions.push(defenseQuestionOne);
 
-// 4. What is the name of the female lead actress in the movie Alien?
-//
-// Britney Spears
-// Whitney Houston
-// Susan Sarandon
-// Sigourney Weaver *
-
 // 3 DEFENSE
 var defenseQuestionThreeAnswerChoices = ['J.K. Rowling', 'H.G. Wells', 'J.R. Tolkien', 'Michael Crichton'];
 var defenseQuestionThree = new Question
@@ -104,12 +138,6 @@ var defenseQuestionThree = new Question
   3,
   '...Really? Come on. We made it easy. It was Michael Crichton.');
 defenseQuestions.push(defenseQuestionOne);
-
-// 6.  Which author wrote the books, Jurassic Park, which was adapted to a major motion picture film?
-// J.K. Rowling
-// H.G. Wells
-// J.R. Tolkien
-// Michael Crichton *
 
 //==========FINAL_QUESTION==========
 
