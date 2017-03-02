@@ -126,6 +126,7 @@ function encounterRound(){
     }
   }else{
     selectedQuestion = selectQuestion('final');
+    document.getElementById('next-question').remove();
     console.log('got here!!!');
   }
 
