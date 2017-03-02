@@ -185,10 +185,22 @@ finalQuestionAnswerChoices,
 
 //==========SCENES==========
 var japan = new Scene (
-  'Japan Year 1185',
-  'images/japansmall.jpg');
+  'Japan',
+  'images/levels300sq/levels-sq-med-japan-temple.jpg');
 console.log(japan);
 locations.push(japan);
+
+var volcano = new Scene (
+  'Volcano',
+  'images/levels300sq/levels-sq-med-volcano.jpg');
+console.log(volcano);
+locations.push(volcano);
+
+var spaceStation = new Scene (
+  'Space Station',
+  'images/levels300sq/levels-sq-med-space-station.jpg');
+console.log(spaceStation);
+locations.push(spaceStation);
 
 // TEMPLATE EXAMPLE
 // parameters: (name, image)
@@ -206,15 +218,12 @@ locations.push(japan);
 // images/levels300sq/levels-sq-med-desert-yellow.jpg
 // images/levels300sq/levels-sq-med-field-tree.jpg
 // images/levels300sq/levels-sq-med-field.jpg
-// images/levels300sq/levels-sq-med-japan-temple.jpg
 // images/levels300sq/levels-sq-med-mountain.jpg
 // images/levels300sq/levels-sq-med-mt-rainier-day.jpg
 // images/levels300sq/levels-sq-med-mt-rainier-distance.jpg
 // images/levels300sq/levels-sq-med-mt-rainier-sunset.jpg
 // images/levels300sq/levels-sq-med-night-stars.jpg
-// images/levels300sq/levels-sq-med-space-station.jpg
 // images/levels300sq/levels-sq-med-spaceship.jpg
-// images/levels300sq/levels-sq-med-volcano.jpg
 
 // images/levels150sq/levels-sq-sm-astronaut.jpg
 // images/levels150sq/levels-sq-sm-castle.jpg
