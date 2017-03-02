@@ -74,7 +74,8 @@ h2 {
 /*Red CAPS enter your name on the landing page.*/
 h3 {
   font-family: 'Press Start 2P', sans-serif;
-  color: #b43b37;
+  /*color: #b43b37; Previous red.*/
+  color: #FF0800;
 }
 
 /*Used for credits page text.*/
