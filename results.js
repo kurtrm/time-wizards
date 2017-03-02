@@ -17,10 +17,13 @@ var winMessage = 'The robot is reassembled, and time has returned back to normal
 var lossMessage = 'You couldn\'t put the robot back together, and time is screwed up forever. Lucky for us, you can try again!';
 
 var headerEl = document.getElementById('results');
+var imgEl = document.getElementById('results-image');
 
 //If the player wins, the Player.score attribute is set to true. It is false otherwise.
 if (player.win === true) {
   headerEl.innerHTML = winMessage;
+  imgEl.src = 'images/Cartoon-Robot-300px.png';
+  imgEl.alt = 'Fixed Robot';
 } else {
   headerEl.innerHTML = lossMessage;
 }
