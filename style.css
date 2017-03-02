@@ -90,6 +90,8 @@ figcaption {
   margin-top: 15px;
   font-family: 'Play', sans-serif;
   color: white;
+  line-height: 1.2em;
+  font-size: 22px;
 }
 
 /*Light blue image border.*/
