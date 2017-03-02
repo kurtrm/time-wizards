@@ -8,7 +8,7 @@
   margin-left: 20%;
   margin-right: 15%;
   /*margin: auto;*/
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   padding: 15px;
   /*border-style: solid;
   border-color: blue;
@@ -36,9 +36,18 @@
 }
 
 #location-image-box {
+  float: left;
+  width: 60%;
+  /*width: 100%;
+  overflow: auto;*/
+  margin-left: 20%;
+  margin-right: 15%;
+  /*margin: auto;*/
+  margin-bottom: 2%;
+  padding: 15px;
   /*border-style: solid;
-  border-color: green;*/
-  margin: auto;
+  border-color: green;
+  background-color: lightgreen;*/
 }
 
 /*This is where the image is coming from*/
