@@ -53,6 +53,16 @@ p {
   color: white;
 }
 
+
+#objectives {
+font-size: 18px;
+}
+
+
+#how-to-play {
+font-size: 18px;
+}
+
 #button-one {
   border: 1px solid black;
   border-radius: 5px;
