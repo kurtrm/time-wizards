@@ -8,16 +8,12 @@ function selectQuestion(questionType){
     var questionIndex = Math.floor(Math.random() * attackQuestions.length);
     var currentAttackQuestion = attackQuestions[questionIndex];
     attackQuestions.splice(questionIndex, 1);
-    console.log(currentAttackQuestion);
-    console.log(attackQuestions.length);
     localStorage.setItem('attackQuestions', JSON.stringify(attackQuestions));
     return currentAttackQuestion;
   }else if(questionType === 'defense'){
     var questionIndex = Math.floor(Math.random() * defenseQuestions.length);
     var currentDefenseQuestion = defenseQuestions[questionIndex];
     defenseQuestions.splice(questionIndex, 1);
-    console.log(currentDefenseQuestion);
-    console.log(defenseQuestions.length);
     localStorage.setItem('defenseQuestions', JSON.stringify(defenseQuestions));
     return currentDefenseQuestion;
   }else if(questionType === 'final'){
