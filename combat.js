@@ -2,22 +2,41 @@
 
 // Selects a random question.
 function selectQuestion(questionType){
+  var attackQuestions = JSON.parse(localStorage.getItem('attackQuestions'));
+  var defenseQuestions = JSON.parse(localStorage.getItem('defenseQuestions'));
   if(questionType === 'attack'){
     var questionIndex = Math.floor(Math.random() * attackQuestions.length);
     var currentAttackQuestion = attackQuestions[questionIndex];
     attackQuestions.splice(questionIndex, 1);
     console.log(currentAttackQuestion);
+    console.log(attackQuestions.length);
+    localStorage.setItem('attackQuestions', JSON.stringify(attackQuestions));
     return currentAttackQuestion;
   }else if(questionType === 'defense'){
     var questionIndex = Math.floor(Math.random() * defenseQuestions.length);
     var currentDefenseQuestion = defenseQuestions[questionIndex];
     defenseQuestions.splice(questionIndex, 1);
     console.log(currentDefenseQuestion);
+    console.log(defenseQuestions.length);
+    localStorage.setItem('defenseQuestions', JSON.stringify(defenseQuestions));
     return currentDefenseQuestion;
   }else if(questionType === 'final'){
     finalQuestionOfGame = 'true';
     roundsPerEncounter = 1;
     return finalQuestion;
+  }
+}
+
+function saveQuestionsToLocalStorage() {
+
+  // Add encountersCompleted to localStorage if it doesn't already exist.
+  if(localStorage.getItem('attackQuestions') === null){
+    localStorage.setItem('attackQuestions', JSON.stringify(attackQuestions));
+  }
+
+  // Add finalQuestionOfGame to localStorage if it doesn't already exist.
+  if(localStorage.getItem('defenseQuestions') === null){
+    localStorage.setItem('defenseQuestions', JSON.stringify(defenseQuestions));
   }
 }
 
@@ -114,7 +133,6 @@ function handleNextQuestionClick(event){
     validSubmit = false;
 
     var radioButtons = document.getElementsByClassName('answer-radio-button');
-    console.log(radioButtons);
     for(var i = 0; i < radioButtons.length; i++) {
       radioButtons[i].checked = false;
     }
@@ -213,6 +231,7 @@ var nextButtonEl = document.getElementById('next-question');
 nextButtonEl.addEventListener('click', handleNextQuestionClick);
 
 // The first round starts automatically.
+saveQuestionsToLocalStorage();
 loadLocalStorage();
 encounterRound();
 
