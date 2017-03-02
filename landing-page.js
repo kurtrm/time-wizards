@@ -1,5 +1,7 @@
 'use strict';
 
+localStorage.clear();
+
 var nameInputEl = document.getElementById('name-form');
 nameInputEl.addEventListener('submit', handleSubmit);
 
