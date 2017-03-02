@@ -1,5 +1,4 @@
 * {
-  border: 2px solid black;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -7,6 +6,21 @@
 
 .player-info, .historical-figure-info, .enemy-info {
   display: inline-block;
+  max-width: 350px;
+  margin: 10px;
+}
+
+.character-info, .location-image-container, .question-block {
+  min-width: 1140px;
+  margin: 10px;
+}
+
+#submit-answer, #next-question, #question {
+  margin: 5px;
+}
+
+#answer-choice-1, #answer-choice-2, #answer-choice-3, #answer-choice-4 {
+  margin: 2px;
 }
 
 nav li {
@@ -25,4 +39,9 @@ a {
 
 .answer-choice, .answer-radio-button {
   display: inline-block;
+}
+
+#player-image, #historical-figure-image, #enemy-image {
+  width: 300px;
+  height: 300px;
 }

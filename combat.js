@@ -133,7 +133,7 @@ function encounterRound(){
 
 // Loads the information needed for the combat phase of the game.
 function loadLocalStorage(){
-  // Load location.
+  // Load scene.
   scene = JSON.parse(localStorage.getItem('scene'));
   // Load player.
   player = JSON.parse(localStorage.getItem('player'));
@@ -198,8 +198,6 @@ loadLocalStorage();
 encounterRound();
 
 //DOM functionality for location
-// var locationNameEl = document.getElementById('location-name');
-// locationNameEl.textContent = (japan.name);
 var locationImageEl = document.getElementById('location-image');
 locationImageEl.setAttribute('src', scene.image);
 
