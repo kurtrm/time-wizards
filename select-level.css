@@ -39,6 +39,8 @@
 
 #location-image {
   border-radius: 100%;
+  border-width: :0px;
+  border-style: none;
   display: block;
   margin: 0px auto;
   margin-top: 30px;
