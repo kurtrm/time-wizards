@@ -23,14 +23,16 @@
   /*margin-right: 0;
   margin-left: 20px;*/
   /*margin: 10px;*/
-  width: 600px;
-  height: 400px;
+  width: 1000px;
+  height: 300px;
+  border: solid;
   border-radius: 15px;
   border-color: black;
-  background-color: #00321f;
+  background-color: #3a0400;
 }
 
 .question-div {
+  margin-top: 10px;
   text-align: left;
 }
 
