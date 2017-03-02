@@ -15,6 +15,10 @@
   background-color: navy;*/
 }
 
+#hidden-button-container {
+  text-align: center;
+}
+
 #historical-image {
   float: left;
   width: 100px;
