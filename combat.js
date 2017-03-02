@@ -31,7 +31,6 @@ function handleSubmit(event){
   if(isNaN(parseInt(event.target.choices.value)) === true) {
     alert('Please select an answer before submitting.');
   }
-  console.log(parseInt(event.target.choices.value));
 
   // Only allows the logic to proceed if the player already submitted an answer.
   if(!validSubmit && isNaN(parseInt(event.target.choices.value)) !== true){
