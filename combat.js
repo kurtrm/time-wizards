@@ -9,7 +9,7 @@ function selectQuestion(questionType){
     var questionIndex = Math.floor(Math.random() * defenseQuestions.length);
     return defenseQuestions[questionIndex];
   }else if(questionType === 'final'){
-    finalQuestionOfGame = true;
+    finalQuestionOfGame = 'true';
     roundsPerEncounter = 1;
     return finalQuestion;
   }
@@ -32,7 +32,7 @@ function handleSubmit(event){
     validSubmit = true;
 
     // If the player just answered the final question of the game.
-    if(finalQuestionOfGame){
+    if(finalQuestionOfGame === 'true'){
       // Check if answer is correct.
       if(parseInt(event.target.choices.value) === selectedQuestion.correctAnswer){
         answerResponseEl.textContent = 'That is correct! You fixed the robot!';
@@ -108,7 +108,7 @@ function handleNextQuestionClick(event){
 // Creates a new round.
 function encounterRound(){
   // Determine which type of question to ask this round.
-  if(!finalQuestionOfGame){
+  if(finalQuestionOfGame !== 'true'){
     if(attackQuestion){
       // Attack.
       selectedQuestion = selectQuestion('attack');
@@ -120,6 +120,7 @@ function encounterRound(){
     }
   }else{
     selectedQuestion = selectQuestion('final');
+    console.log('got here!!!');
   }
 
   // Set the text pertaining to the question for the player to see.
@@ -139,13 +140,16 @@ function loadLocalStorage(){
   scoreAtEncounterStart = player.score;
   // Load historical figure.
   historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
-  console.log(historicalFigure);
+  finalQuestionOfGame = localStorage.getItem('finalQuestionOfGame');
 }
 
 // Saves the information needed for the select-level and results page.
 function saveLocalStorage(){
   // Save player.
   localStorage.setItem('player', JSON.stringify(player));
+  var tempEncountersCompleted = parseInt(localStorage.getItem('encountersCompleted'));
+  tempEncountersCompleted += 1;
+  localStorage.setItem('encountersCompleted', tempEncountersCompleted);
 }
 
 // Will be true when the submit button changes into a proceed button.
@@ -153,7 +157,7 @@ var exitEncounter = false;
 // Will be true if this current round will be an attack.
 var attackQuestion = true;
 // Will be true if the player is on the "fix the robot" question.
-var finalQuestionOfGame = false;
+var finalQuestionOfGame = 'false';
 // How many rounds are per an encounter.
 var roundsPerEncounter = 3;
 // The round the player is currently on.
@@ -190,8 +194,8 @@ var nextButtonEl = document.getElementById('next-question');
 nextButtonEl.addEventListener('click', handleNextQuestionClick);
 
 // The first round starts automatically.
-encounterRound();
 loadLocalStorage();
+encounterRound();
 
 //DOM functionality for location
 // var locationNameEl = document.getElementById('location-name');
