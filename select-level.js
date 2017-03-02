@@ -25,14 +25,17 @@ function generateScenes() {
     console.log('Created ' + locations[i].name);
 
     var sceneImage = document.createElement('img'); // Scene image.
+    sceneImage.setAttribute('class', 'scene-image');
     sceneImage.setAttribute('id', 'scene-image-' + i);
     sceneImage.setAttribute('src', locations[i].image);
 
     var sceneImageLink = document.createElement('a'); // Image link.
     sceneImageLink.setAttribute('id', 'scene-portal-link-' + i);
     sceneImageLink.appendChild(sceneImage);
+    sceneImageLink.setAttribute('href', 'combat.html');
 
     var sceneName = document.createElement('h3'); // Portal name.
+    sceneName.setAttribute('class', 'scene-name');
     sceneName.setAttribute('id', 'scene-name-' + i);
     sceneName.textContent = locations[i].name;
 
@@ -42,6 +45,7 @@ function generateScenes() {
     sceneLink.setAttribute('href', 'combat.html');
 
     var scenePortal = document.createElement('div'); // Container.
+    scenePortal.setAttribute('class', 'scene');
     scenePortal.setAttribute('id', 'scene-portal-' + i);
     scenePortal.appendChild(sceneImageLink);
     scenePortal.appendChild(sceneLink);
