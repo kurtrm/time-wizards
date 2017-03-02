@@ -101,6 +101,12 @@ function handleNextQuestionClick(event){
     // Reset validSumbit for next round.
     validSubmit = false;
 
+    var radioButtons = document.getElementsByClassName('answer-radio-button');
+    console.log(radioButtons);
+    for(var i = 0; i < radioButtons.length; i++) {
+      radioButtons[i].checked = false;
+    }
+
     answerResponseEl.textContent = '';
   }
 }
