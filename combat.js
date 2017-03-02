@@ -4,10 +4,16 @@
 function selectQuestion(questionType){
   if(questionType === 'attack'){
     var questionIndex = Math.floor(Math.random() * attackQuestions.length);
-    return attackQuestions[questionIndex];
+    var currentAttackQuestion = attackQuestions[questionIndex];
+    attackQuestions.splice(questionIndex, 1);
+    console.log(currentAttackQuestion);
+    return currentAttackQuestion;
   }else if(questionType === 'defense'){
     var questionIndex = Math.floor(Math.random() * defenseQuestions.length);
-    return defenseQuestions[questionIndex];
+    var currentDefenseQuestion = defenseQuestions[questionIndex];
+    defenseQuestions.splice(questionIndex, 1);
+    console.log(currentDefenseQuestion);
+    return currentDefenseQuestion;
   }else if(questionType === 'final'){
     finalQuestionOfGame = 'true';
     roundsPerEncounter = 1;
