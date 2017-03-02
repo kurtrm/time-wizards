@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+
 * {
   margin-left: auto;
   margin-right: auto;
@@ -13,6 +16,10 @@
 .character-info, .location-image-container, .question-block {
   min-width: 1140px;
   margin: 10px;
+}
+
+.question-div {
+  text-align: left;
 }
 
 #submit-answer, #next-question, #question {
@@ -37,8 +44,14 @@ a {
  text-decoration: none;
 }
 
-.answer-choice, .answer-radio-button {
-  display: inline-block;
+label {
+  font-family: 'Play', sans-serif;
+  color: white;
+}
+
+.answer-radio-button {
+  /*display: inline-block;*/
+  margin-left: 40% !important;
 }
 
 #player-image, #historical-figure-image, #enemy-image {

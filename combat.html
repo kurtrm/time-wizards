@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="location-image-container">
-      <img id="location-image">      
+      <img id="location-image">
     </div>
     <div class="character-info">
       <div class="player-info">
@@ -33,21 +33,21 @@
     <div class="question-block">
       <p id="question">The question being asked.</p>
       <form id="answer-choices">
-        <div>
-          <input class="answer-radio-button" type="radio" name="choices" value="0">
-          <p id="answer-choice-1" class="answer-choice">Choice 1</p>
+        <div class="question-div">
+          <input class="answer-radio-button" id="first-choice" type="radio" name="choices" value="0">
+          <label for="first-choice" id="answer-choice-1" class="answer-choice">Choice 1</label>
         </div>
-        <div>
-          <input class="answer-radio-button" type="radio" name="choices" value="1">
-          <p id="answer-choice-2" class="answer-choice">Choice 2</p>
+        <div class="question-div">
+          <input class="answer-radio-button" id="second-choice" type="radio" name="choices" value="1" >
+          <label for="second-choice" id="answer-choice-2" class="answer-choice">Choice 2</label>
         </div>
-        <div>
-          <input class="answer-radio-button" type="radio" name="choices" value="2">
-          <p id="answer-choice-3" class="answer-choice">Choice 3</p>
+        <div class="question-div">
+          <input class="answer-radio-button" id="third-choice" type="radio" name="choices" value="2">
+          <label for="third-choice" id="answer-choice-3" class="answer-choice">Choice 3</label>
         </div>
-        <div>
-          <input class="answer-radio-button" type="radio" name="choices" value="3">
-          <p id="answer-choice-4" class="answer-choice">Choice 4</p>
+        <div class="question-div">
+          <input class="answer-radio-button" id="fourth-choice" type="radio" name="choices" value="3">
+          <label for="fourth-choice"  id="answer-choice-4" class="answer-choice">Choice 4</label>
         </div>
         <button id="submit-answer" type="submit" name="submitButton">Submit</button>
       </form>
