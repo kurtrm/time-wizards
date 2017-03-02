@@ -13,11 +13,19 @@ a {
 .credits-title {
   /*border: 1px solid black;*/
   width: 75%;
-  height: 75px;
+  height: 180px;
   margin: 0 auto;
 }
 
 #credits-heading {
+  text-align: center;
+  margin: 25px auto;
+  font-size: 64px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 5px;
+}
+
+#team-heading {
   text-align: center;
   margin: 25px auto;
   font-size: 64px;
