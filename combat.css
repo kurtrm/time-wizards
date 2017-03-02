@@ -13,9 +13,21 @@
   margin: 10px;
 }
 
-.character-info, .location-image-container, .question-block {
+/*.question-block was included here*/
+.character-info, .location-image-container {
   min-width: 1140px;
   margin: 10px;
+}
+
+.question-block {
+  /*margin-right: 0;
+  margin-left: 20px;*/
+  /*margin: 10px;*/
+  width: 600px;
+  height: 400px;
+  border-radius: 15px;
+  border-color: black;
+  background-color: #00321f;
 }
 
 .question-div {
