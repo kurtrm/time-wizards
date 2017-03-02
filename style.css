@@ -52,6 +52,8 @@ article {
 p {
   font-family: 'Play', sans-serif;
   color: white;
+  font-size: 24px;
+  line-height: 1.2em;
 }
 
 /*Yellow CAPS Fracture heading.*/
@@ -74,7 +76,9 @@ h2 {
 /*Red CAPS enter your name on the landing page.*/
 h3 {
   font-family: 'Press Start 2P', sans-serif;
-  color: #b43b37;
+  /*color: #b43b37; Previous red.*/
+  color: #FF0800;
+  font-size: 22px;
 }
 
 /*Used for credits page text.*/
@@ -86,6 +90,8 @@ figcaption {
   margin-top: 15px;
   font-family: 'Play', sans-serif;
   color: white;
+  line-height: 1.2em;
+  font-size: 22px;
 }
 
 /*Light blue image border.*/
