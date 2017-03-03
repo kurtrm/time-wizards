@@ -78,3 +78,7 @@ label {
   width: 300px;
   height: 300px;
 }
+
+#player-image {
+  margin-bottom: 27px;
+}
