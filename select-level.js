@@ -157,14 +157,9 @@ function handlePortalClick(event){
   // Get all text spliced after that as a parseInt() return.
   // Use that index to know what place in the array to go to and set+save scene as that scene in remainingScenes[].
   var portalId = event.target.getAttribute('id');
-  console.log('Portal ID: ' + portalId);
   var lastDashIndex = portalId.lastIndexOf('-');
-  console.log('Last Dash Index: ' + lastDashIndex);
   var sceneIndex = parseInt(portalId.slice((lastDashIndex + 1), portalId.length));
-  console.log(portalId.slice((lastDashIndex + 1), portalId.length));
-  console.log('Scene Index: ' + sceneIndex);
   scene = remainingScenes[sceneIndex];
-  console.log(scene.name);
   localStorage.setItem('scene', JSON.stringify(scene));
 
   // Go to the combat phase.
