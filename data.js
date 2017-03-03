@@ -244,19 +244,19 @@ locations.push(spaceStation);
 //==========HISTORICAL FIGURES==========
 
 // This object defines the historical figure.
-var einstein = new HistoricalFigure ('Albert MF Einstein', ['You do not really understand something unless you can explain it to your grandmother.', 'It is a miracle that curiosity survives formal education.'], 'Hello friend my name is Albert and I’m here to assist you. Please click on a portal below to begin your journey to fix time. Yell E=MC\xB2 as you jump into the portal!', ['images/albert.jpg', 'images/einstein2.jpg']);
+var einstein = new HistoricalFigure ('Albert MF Einstein', ['You do not really understand something unless you can explain it to your grandmother.', 'It is a miracle that curiosity survives formal education.'], 'Hello friend my name is Albert and I\’m here to assist you. Please click on a portal below to begin your journey to fix time. Yell E=MC\xB2 as you jump into the portal!', ['images/albert.jpg']);
 console.log(einstein);
 historicalFigures.push(einstein);
 
-var bigfoot = new HistoricalFigure ('Bigfoot', ['', ''], '', ['images/figures300sq/figures-sq-med-bigfoot.jpg', '']);
+var bigfoot = new HistoricalFigure ('Bigfoot', 'You can do it!', 'Me Bigfoot. I help you.', ['images/figures300sq/figures-sq-med-bigfoot.jpg']);
 console.log(bigfoot);
 historicalFigures.push(bigfoot);
 
-var darwin = new HistoricalFigure ('Charles Darwin', ['', ''], '', ['images/figures300sq/figures-sq-med-darwin-front.jpg', '']);
+var darwin = new HistoricalFigure ('Charles Darwin', 'You can do it!', 'Good day, my name is Darwin and I\’m here to assist you.', ['images/figures300sq/figures-sq-med-darwin-front.jpg']);
 console.log(darwin);
 historicalFigures.push(darwin);
 
-var elizabeth = new HistoricalFigure ('Queen Elizabeth', ['', ''], '', ['images/figures300sq/figures-sq-med-queen-hat.jpg', '']);
+var elizabeth = new HistoricalFigure ('Queen Elizabeth', 'You can do it!', 'Hello, I am the Queen and I\’m here to assist you.', ['images/figures300sq/figures-sq-med-queen-hat.jpg']);
 console.log(elizabeth);
 historicalFigures.push(elizabeth);
 
