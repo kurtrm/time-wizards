@@ -33,6 +33,10 @@
   text-align: left;
 }
 
+#answer-choices {
+  width: 800px;
+}
+
 #next-question, #question {
   margin: 5px;
 }
@@ -67,7 +71,7 @@ label {
 
 .answer-radio-button {
   /*display: inline-block;*/
-  margin-left: 20% !important;
+  /*margin-left: 20% !important;*/
 }
 
 #player-image, #historical-figure-image, #enemy-image {
