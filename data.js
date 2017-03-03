@@ -3,7 +3,7 @@
 // The lists of instances of each object type.
 var attackQuestions = [];
 var defenseQuestions = [];
-var locations = [];
+var scenes = [];
 var enemies = [];
 var historicalFigures = [];
 
@@ -187,17 +187,17 @@ finalQuestionAnswerChoices,
 var japan = new Scene (
   'Japan',
   'images/levels300sq/levels-sq-med-japan-temple.jpg');
-locations.push(japan);
+scenes.push(japan);
 
 var volcano = new Scene (
   'Volcano',
   'images/levels300sq/levels-sq-med-volcano.jpg');
-locations.push(volcano);
+scenes.push(volcano);
 
 var spaceStation = new Scene (
   'Space Station',
   'images/levels300sq/levels-sq-med-space-station.jpg');
-locations.push(spaceStation);
+scenes.push(spaceStation);
 
 // TEMPLATE EXAMPLE
 // parameters: (name, image)
@@ -206,7 +206,7 @@ locations.push(spaceStation);
 //   'Japan Year 1185',
 //   'images/japansmall.jpg');
 // console.log(japan);
-// locations.push(japan);
+// scenes.push(japan);
 
 // RELATIVE FILE PATHS
 // images/levels300sq/levels-sq-med-astronaut.jpg

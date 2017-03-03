@@ -229,9 +229,14 @@ saveQuestionsToLocalStorage();
 loadLocalStorage();
 encounterRound();
 
-//DOM functionality for location
-var locationImageEl = document.getElementById('location-image');
-locationImageEl.setAttribute('src', scene.image);
+//DOM functionality for scene
+var sceneImageEl = document.getElementById('scene-image');
+if(finalQuestionOfGame === 'false'){
+  sceneImageEl.setAttribute('src', scene.image);
+}else{
+  // The last question of the game's image is special.
+  sceneImageEl.setAttribute('src', 'images/broken-glass.png');
+}
 
 //DOM functionality for player
 var playerNameEl = document.getElementById('player-name');
