@@ -201,6 +201,7 @@ historicalFigureImageEl.setAttribute('src', historicalFigure.image);
 if(encountersCompleted === encountersPerGame){
   // The combat phase of the game will now know that it's the final question of the game.
   localStorage.setItem('finalQuestionOfGame', 'true');
+  sceneContainer.remove();
 
   // Reveal final question button to combat phase.
   var hiddenButton = document.createElement('button');
