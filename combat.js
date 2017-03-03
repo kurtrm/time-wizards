@@ -248,7 +248,7 @@ historicalFigureNameEl.textContent = (historicalFigure.name);
 var historicalFigureSpeechEl = document.getElementById('historical-figure-speech');
 historicalFigureSpeechEl.textContent = (historicalFigure.comments);
 var historicalFigureImageEl = document.getElementById('historical-figure-image');
-historicalFigureImageEl.setAttribute('src', historicalFigure.image[1]);
+historicalFigureImageEl.setAttribute('src', historicalFigure.image);
 
 //DOM functionality for enemy
 var enemyNameEl = document.getElementById('enemy-name');
