@@ -55,7 +55,7 @@ var attackQuestionFive = new Question
 attackQuestions.push(attackQuestionFive);
 
 //6 ATTACK
-var attackQuestionSixAnswerChoices = ['Packed data sets can not be processed differently.', 'Shared memory or thread level parallelism allow different parallel paths on multiple data', 'It returns a selection mask with API vectors', 'Typed arrays split implementation into buffers and views'];
+var attackQuestionSixAnswerChoices = ['Packed data sets can not be processed differently.', 'Code Code Code Code Code Code', 'It returns a selection mask with API vectors', 'Typed arrays split implementation into buffers and views'];
 var attackQuestionSix = new Question
   ('What is the downside of Single Instruction/Multiple data methods?',
   attackQuestionSixAnswerChoices,
