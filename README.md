@@ -11,7 +11,7 @@ The player has to travel through time warp-holes to retrieve the robot's missing
 
 ## Website Location
 Location of the deployed Fracture game on GitHub:
-https://kurtrm.github.io/time-wizards/
+https://kurtrm.github.io/time-wizards/index.html
 
 ## Installation
 
