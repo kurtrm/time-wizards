@@ -1,5 +1,10 @@
 'use strict';
 
+// Returns a random whole number between the min (inclusive) and max (exclusive).
+function randomize(min, max){
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 // Selects a random question.
 function selectQuestion(questionType){
   var attackQuestions = JSON.parse(localStorage.getItem('attackQuestions'));
@@ -17,20 +22,18 @@ function selectQuestion(questionType){
     localStorage.setItem('defenseQuestions', JSON.stringify(defenseQuestions));
     return currentDefenseQuestion;
   }else if(questionType === 'final'){
-    finalQuestionOfGame = 'true';
     roundsPerEncounter = 1;
     return finalQuestion;
   }
 }
 
-function saveQuestionsToLocalStorage() {
-
-  // Add encountersCompleted to localStorage if it doesn't already exist.
+function saveQuestionsToLocalStorage(){
+  // Add attackQuestions to localStorage if it doesn't already exist.
   if(localStorage.getItem('attackQuestions') === null){
     localStorage.setItem('attackQuestions', JSON.stringify(attackQuestions));
   }
 
-  // Add finalQuestionOfGame to localStorage if it doesn't already exist.
+  // Add defenseQuestions to localStorage if it doesn't already exist.
   if(localStorage.getItem('defenseQuestions') === null){
     localStorage.setItem('defenseQuestions', JSON.stringify(defenseQuestions));
   }
@@ -38,9 +41,41 @@ function saveQuestionsToLocalStorage() {
 
 // Selects a random enemy.
 function selectEnemy(){
-  //var enemyIndex = Math.floor(Math.random() * enemies.length);
-  console.log(enemies[0]);
-  return enemies[0];
+  // If it's the final round, choose a specific boss enemy.
+  if(finalQuestionOfGame === 'true'){
+    enemy = dalek;
+    localStorage.setItem('enemy', JSON.stringify(enemy));
+  }else{
+    // Not the final round, so choose a random enemy.
+    if(localStorage.getItem('remainingEnemies') !== null){
+      // This is NOT the first time on this page this play-through.
+      remainingEnemies = JSON.parse(localStorage.getItem('remainingEnemies'));
+      enemy = JSON.parse(localStorage.getItem('enemy'));
+
+      // Check all remaining enemies from before the encounter, and remove the one that
+      // the player has just defeated from the array.
+      for(var i = 0; i < remainingEnemies.length; i++){
+        if(remainingEnemies[i].name === enemy.name){
+          remainingEnemies.splice([i], 1); // Remove = (index, array[1])
+          localStorage.setItem('remainingEnemies', JSON.stringify(remainingEnemies));
+          // Found the enemy previously shown, exit the loop.
+          break;
+        }
+      }
+
+      // Select a new enemy for this encounter out of the edited remaining enemies' array.
+      enemy = remainingEnemies[randomize(0, remainingEnemies.length)];
+      localStorage.setItem('enemy', JSON.stringify(enemy));
+    }else{
+      // This is the first time getting to this page for this play-through.
+      // The player will be given access to ALL possible enemies to start with.
+      remainingEnemies = enemies;
+      localStorage.setItem('remainingEnemies', JSON.stringify(remainingEnemies));
+      // Generate the FIRST enemy.
+      enemy = enemies[randomize(0, enemies.length)];
+      localStorage.setItem('enemy', JSON.stringify(enemy));
+    }
+  }
 }
 
 // Handles the submit button being clicked in the form.
@@ -204,7 +239,8 @@ var validSubmit = false;
 var scene;
 var player;
 var historicalFigure;
-var enemy = selectEnemy();
+var enemy;
+var remainingEnemies;
 
 // Element containing the text of the question being asked.
 var questionEl = document.getElementById('question');
@@ -227,6 +263,7 @@ nextButtonEl.addEventListener('click', handleNextQuestionClick);
 // The first round starts automatically.
 saveQuestionsToLocalStorage();
 loadLocalStorage();
+selectEnemy();
 encounterRound();
 
 //DOM functionality for scene

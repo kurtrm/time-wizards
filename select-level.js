@@ -130,7 +130,7 @@ function saveLocalStorage(){
 
   // Add finalQuestionOfGame to localStorage if it doesn't already exist.
   if(localStorage.getItem('finalQuestionOfGame') === null){
-    localStorage.setItem('finalQuestionOfGame', false);
+    localStorage.setItem('finalQuestionOfGame', 'false');
   }
 }
 
@@ -205,7 +205,7 @@ historicalFigureImageEl.setAttribute('src', historicalFigure.image);
 // they now will be given the option of going to repair the robot.
 if(encountersCompleted === encountersPerGame){
   // The combat phase of the game will now know that it's the final question of the game.
-  localStorage.setItem('finalQuestionOfGame', true);
+  localStorage.setItem('finalQuestionOfGame', 'true');
 
   // Reveal final question button to combat phase.
   var hiddenButton = document.createElement('button');
