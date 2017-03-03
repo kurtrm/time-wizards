@@ -272,7 +272,7 @@ if(finalQuestionOfGame === 'false'){
   sceneImageEl.setAttribute('src', scene.image);
 }else{
   // The last question of the game's image is special.
-  sceneImageEl.setAttribute('src', 'images/broken-glass.png');
+  sceneImageEl.setAttribute('src', 'images/finallevel.png');
 }
 
 //DOM functionality for player
