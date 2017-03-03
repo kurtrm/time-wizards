@@ -256,7 +256,7 @@ var darwin = new HistoricalFigure ('Charles Darwin', 'You can do it!', 'Good day
 console.log(darwin);
 historicalFigures.push(darwin);
 
-var elizabeth = new HistoricalFigure ('Queen Elizabeth', 'You can do it!', 'Hello, I am the Queen and I\’m here to assist you.', ['images/figures300sq/figures-sq-med-queen-hat.jpg']);
+var elizabeth = new HistoricalFigure ('Queen Elizabeth', 'You can do it!', 'Hello pleb, I am the Queen, but I\'ll help you anyway.', ['images/figures300sq/figures-sq-med-queen-hat.jpg']);
 console.log(elizabeth);
 historicalFigures.push(elizabeth);
 

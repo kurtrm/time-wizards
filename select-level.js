@@ -9,6 +9,9 @@ var hiddenButtonContainerEl = document.getElementById('hidden-button-container')
 var historicalFigure;
 var scene = japan;
 
+var remainingHistoricalFigures;
+var remainingScenes;
+
 var encountersPerGame = 1;
 var encountersCompleted = 0;
 
@@ -30,12 +33,6 @@ function selectHistoricalFigure() {
 //randomizeHistoricalFigure
   historicalFigure = historicalFigures[randomizeHistoricalFigure()];
 }
-selectHistoricalFigure();
-
-historicalFigureIntroEl.textContent = (historicalFigure.intro);
-historicalFigureImageEl.setAttribute('src', historicalFigure.image);
-
-console.log('Random Historical Figure: ' + historicalFigure.name);
 
 // Create all levels/scenes dynamically
 function generateScenes() {
@@ -74,10 +71,36 @@ function generateScenes() {
   }
 }
 
-generateScenes();
+function rememberHistoricalFigures() {
+
+  // Pull random historicalFigure to localStorage if it doesn't already exist.
+  if(localStorage.getItem('historicalFigure') === null){
+    localStorage.setItem('historicalFigure', JSON.stringify(selectHistoricalFigure()));
+  }
+
+  if (localStorage.getItem('remainingHistoricalFigures') !== null) {
+  // If present the player has played a previous encounter already.
+  // Remove previous hist fig from remaining hist fig.
+  // console.log(remainingHistoricalFigures);
+    for (var i = 0; i < remainingHistoricalFigures.length; i++) {
+      if (remainingHistoricalFigures[i].name === historicalFigure.name) {
+        reaminaingHistoricalFigures.splice([i], 1); // Remove = (index, array[1])
+        // Save entire figures array for first time.
+        localStorage.setItem('remainingHistoricalFigures', remainingHistoricalFigures);
+        break;
+      }
+    }
+  } else {
+  // False. 1st time page 3 loaded, this play-through.
+  // Setting remaining hist fig to hist fig array.
+    remainingHistoricalFigures = historicalFigures;
+    localStorage.setItem('remainingHistoricalFigures', remainingHistoricalFigures);
+  }
+}
 
 function saveToLocalStorage() {
-  localStorage.setItem('historicalFigure', JSON.stringify(historicalFigure));
+  rememberHistoricalFigures();
+
   localStorage.setItem('scene', JSON.stringify(scene));
 
   // Add encountersCompleted to localStorage if it doesn't already exist.
@@ -96,6 +119,11 @@ function loadFromLocalStorage() {
   scene = JSON.parse(localStorage.getItem('scene'));
   historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
   encountersCompleted = parseInt(localStorage.getItem('encountersCompleted'));
+
+  if(localStorage.getItem('historicalFigure') !== null){
+    // check current hist fig value, remove from possible next shown values.
+    historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
+  }
 }
 
 function handleClick(event){
@@ -107,6 +135,12 @@ function handleClick(event){
 
 saveToLocalStorage();
 loadFromLocalStorage();
+generateScenes();
+
+historicalFigureIntroEl.textContent = (historicalFigure.intro);
+historicalFigureImageEl.setAttribute('src', historicalFigure.image);
+
+console.log('Random Historical Figure: ' + historicalFigure.name);
 
 if(encountersCompleted === encountersPerGame){
   localStorage.setItem('finalQuestionOfGame', true);
