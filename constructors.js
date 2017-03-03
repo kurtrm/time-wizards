@@ -9,14 +9,10 @@ function Player (name, image, score) {
   this.speech = '';
 }
 
-//Example to add new instance.
-// var playerOne = new Player('Michael', 'michael.jpg', 0);
-// console.log(playerOne);
-
 // This object defines the historical figure.
 function HistoricalFigure (name, comments, intro, image) {
   this.name = name;
-  this.comments = comments || []; // Sets default values if necessary.
+  this.comments = comments || ''; // Sets default values if necessary.
   this.intro = intro;
   this.image = image;
 }
@@ -24,7 +20,7 @@ function HistoricalFigure (name, comments, intro, image) {
 function Enemy (name, image, speech) {
   this.name = name || ''; // Sets default values if necessary.
   this.image = image || '';
-  this.speech = speech || [];
+  this.speech = speech || '';
 };
 
 // This object defines the location (level).
