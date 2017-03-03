@@ -198,6 +198,21 @@ var spaceStation = new Scene (
   'images/levels300sq/levels-sq-med-space-station.jpg');
 scenes.push(spaceStation);
 
+var mtRainier = new Scene (
+  'Mt. Rainier',
+  'images/levels300sq/levels-sq-med-mt-rainier-sunset.jpg');
+scenes.push(mtRainier);
+
+var desert = new Scene (
+  'Desert',
+  'images/levels300sq/levels-sq-med-desert-orange.jpg');
+scenes.push(desert);
+
+var castle = new Scene (
+  'Castle',
+  'images/levels300sq/levels-sq-med-castle.jpg');
+scenes.push(castle);
+
 // TEMPLATE EXAMPLE
 // parameters: (name, image)
 // types: string, string
@@ -243,36 +258,28 @@ scenes.push(spaceStation);
 var einstein = new HistoricalFigure ('Albert MF Einstein', ['Advice from a genius, use GOOGLE!'], 'Hello friend my name is Albert and I\’m here to assist you. Please click on a portal below to begin your journey to fix time. Yell E=MC\xB2 as you jump into the portal!', ['images/albert.jpg']);
 historicalFigures.push(einstein);
 
-var bigfoot = new HistoricalFigure ('Bigfoot', 'You can do it!', 'Me Bigfoot. I help you.', ['images/figures300sq/figures-sq-med-bigfoot.jpg']);
+var bigfoot = new HistoricalFigure ('Bigfoot', 'Crush puny enemy!', 'Me Bigfoot. I help you.', ['images/figures300sq/figures-sq-med-bigfoot.jpg']);
 historicalFigures.push(bigfoot);
 
-var darwin = new HistoricalFigure ('Charles Darwin', 'You can do it!', 'Good day, my name is Darwin and I\’m here to assist you.', ['images/figures300sq/figures-sq-med-darwin-front.jpg']);
+var darwin = new HistoricalFigure ('Charles Darwin', 'Darwin Award for this enemy.', 'Good day, my name is Darwin and I\’m here to assist you.', ['images/figures300sq/figures-sq-med-darwin-front.jpg']);
 historicalFigures.push(darwin);
 
-var elizabeth = new HistoricalFigure ('Queen Elizabeth', 'You can do it!', 'Hello pleb, I am the Queen, but I\'ll help you anyway.', ['images/figures300sq/figures-sq-med-queen-hat.jpg']);
+var elizabeth = new HistoricalFigure ('Queen Elizabeth', 'You\'ve got me mad!', 'Hello pleb, I am the Queen, but I\'ll help you anyway.', ['images/figures300sq/figures-sq-med-queen-hat.jpg']);
 historicalFigures.push(elizabeth);
 
 var elvis = new HistoricalFigure ('Elvis', 'You ain\'t nothing but a hounddog. Chew \'em up!', 'I\'m back from the dead. I will help you with my musical ways.', ['images/elvis-1999737.png']);
 historicalFigures.push(elvis);
 
-// TEMPLATE EXAMPLE
-// parameters: (name, comments, intro, image)
-// types: string, string, string, string array [small image, large image]
-// var bigfoot = new HistoricalFigure ('Bigfoot', ['', ''], '', ['', '']);
-// console.log(bigfoot);
-// historicalFigures.push(bigfoot);
-
-// RELATIVE FILE PATHS
-// images/figures300sq/figures-sq-med-darwin-side.jpg
-// images/figures300sq/figures-sq-med-queen-crown.jpg
-
-// images/figures150sq/figures-sq-sm-bigfoot.jpg
-// images/figures150sq/figures-sq-sm-darwin-front.jpg
-// images/figures150sq/figures-sq-sm-darwin-side.jpg
-// images/figures150sq/figures-sq-sm-queen-crown.jpg
-// images/figures150sq/figures-sq-sm-queen-hat.jpg
-
 //==========ENEMIES==========
+
+var jarJarBinks = new Enemy ('Jar Jar Binks', 'images/Jar_Jar_aotc.jpg', 'Me\'s truly best character!');
+enemies.push(jarJarBinks);
+
+var unicorn = new Enemy('(Real) Unicorn', 'images/unicorn.jpg', 'Hi ther-- I MEAN...NEIGHHH');
+enemies.push(unicorn);
+
+var adam = new Enemy('The Adam', 'images/monsters300sq/monsters-sq-med-adam.png', 'Fundamentally...');
+enemies.push(adam);
 
 var darth = new Enemy ('Darth Vader', 'images/darth-vader-1282288.jpg', 'The Empire will defeat you!');
 enemies.push(darth);
@@ -294,17 +301,3 @@ enemies.push(robotLady);
 
 // Final question boss. Won't be put into normal enemy array.
 var dalek = new Enemy ('Dalek', 'images/monsters300sq/monsters-sq-med-dalek.jpg', 'Exterminate!');
-
-// TEMPLATE EXAMPLE
-// parameters: (name, image, speech)
-// types: string, string, string
-// var trex = new Enemy ('T-rex', 'images/trex.jpg', 'RAWWWRRRRR!!!');
-// console.log(trex);
-// enemies.push(trex);
-
-// RELATIVE FILE PATHS
-
-// images/monsters150sq/monsters-sq-sm-dinosaur.jpg
-// images/monsters150sq/monsters-sq-sm-hitler.jpg
-// images/monsters150sq/monsters-sq-sm-kim.jpg
-// images/monsters150sq/monsters-sq-sm-robot-lady.jpg
