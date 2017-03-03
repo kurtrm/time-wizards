@@ -20,11 +20,8 @@
 }
 
 .question-block {
-  /*margin-right: 0;
-  margin-left: 20px;*/
-  /*margin: 10px;*/
   width: 1000px;
-  height: 350px;
+  height: 375px;
   border: solid;
   border-radius: 15px;
   border-color: black;
@@ -36,8 +33,12 @@
   text-align: left;
 }
 
-#submit-answer, #next-question, #question {
+#next-question, #question {
   margin: 5px;
+}
+
+#submit-answer {
+  margin-top: 20px;
 }
 
 #answer-choice-1, #answer-choice-2, #answer-choice-3, #answer-choice-4 {
@@ -66,7 +67,7 @@ label {
 
 .answer-radio-button {
   /*display: inline-block;*/
-  margin-left: 40% !important;
+  margin-left: 20% !important;
 }
 
 #player-image, #historical-figure-image, #enemy-image {
