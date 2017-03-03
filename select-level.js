@@ -157,14 +157,9 @@ function handlePortalClick(event){
   // Get all text spliced after that as a parseInt() return.
   // Use that index to know what place in the array to go to and set+save scene as that scene in remainingScenes[].
   var portalId = event.target.getAttribute('id');
-  console.log('Portal ID: ' + portalId);
   var lastDashIndex = portalId.lastIndexOf('-');
-  console.log('Last Dash Index: ' + lastDashIndex);
   var sceneIndex = parseInt(portalId.slice((lastDashIndex + 1), portalId.length));
-  console.log(portalId.slice((lastDashIndex + 1), portalId.length));
-  console.log('Scene Index: ' + sceneIndex);
   scene = remainingScenes[sceneIndex];
-  console.log(scene.name);
   localStorage.setItem('scene', JSON.stringify(scene));
 
   // Go to the combat phase.
@@ -206,6 +201,7 @@ historicalFigureImageEl.setAttribute('src', historicalFigure.image);
 if(encountersCompleted === encountersPerGame){
   // The combat phase of the game will now know that it's the final question of the game.
   localStorage.setItem('finalQuestionOfGame', 'true');
+  sceneContainer.remove();
 
   // Reveal final question button to combat phase.
   var hiddenButton = document.createElement('button');
@@ -213,4 +209,8 @@ if(encountersCompleted === encountersPerGame){
   hiddenButton.textContent = 'REPAIR THE ROBOT';
   hiddenButton.addEventListener('click', handleHiddenButtonClick);
   hiddenButtonContainerEl.appendChild(hiddenButton);
+
+  // Change historical figure text to final
+  var finalLevelTextEl = document.getElementById('historical-text');
+  finalLevelTextEl.textContent = 'You went to all the portals and found the parts to the S.U.C.K. Proceed to the final level and fix the S.U.C.K!';
 }
