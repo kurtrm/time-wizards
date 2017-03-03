@@ -36,34 +36,3 @@ function changeBatman () {
   var batmanEl = document.getElementById('border-outline');
   batmanEl.setAttribute('src', 'images/batman.jpg');
 }
-
-// Function to animate Batman NANANANANAN...but it didn't work =T
-
-// window.onload = readyBatman();
-
-// var batmanObject = null;
-// var animate ;
-//
-// function readyBatman(){
-//   batmanObject.document.getElementById('batman');
-//   batmanObject.style.visibility = 'hidden';
-//   batmanObject.style.position = 'relative';
-//   batmanObject.style.left = '0px';
-//
-// }
-// function moveRight(){
-//   batmanObject.style.visibility = 'visible';
-//   batmanObject.style.left = parseInt(batmanObject.style.left) + 10 + 'px';
-//   animate = setTimeout(moveRight,50); // call moveRight in 20msec
-// }
-//
-// function stop(){
-//   clearTimeout(animate);
-//   batmanObject.style.left = '0px';
-// }
-
-// var batmanEl = document.getElementById('batman');
-// var batmanImage = document.createElement('img');
-//
-// batmanImage.setAttribute('src', 'images/batman.jpg');
-// batmanEl.appendChild('batmanImage');
