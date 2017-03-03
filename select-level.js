@@ -209,4 +209,8 @@ if(encountersCompleted === encountersPerGame){
   hiddenButton.textContent = 'REPAIR THE ROBOT';
   hiddenButton.addEventListener('click', handleHiddenButtonClick);
   hiddenButtonContainerEl.appendChild(hiddenButton);
+
+  // Change historical figure text to final
+  var finalLevelTextEl = document.getElementById('historical-text');
+  finalLevelTextEl.textContent = 'You went to all the portals and found the parts to the S.U.C.K. Proceed to the final level and fix the S.U.C.K!';
 }
