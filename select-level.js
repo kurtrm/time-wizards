@@ -2,13 +2,11 @@
 
 // This section adds text data to historical figure
 var historicalFigureIntroEl = document.getElementById('historical-text');
-historicalFigureIntroEl.textContent = (einstein.intro);
 var historicalFigureImageEl = document.getElementById('historical-image');
-historicalFigureImageEl.setAttribute('src', einstein.image[0]);
 
 var hiddenButtonContainerEl = document.getElementById('hidden-button-container');
 
-var historicalFigure = einstein;
+var historicalFigure;
 var scene = japan;
 
 var encountersPerGame = 1;
@@ -16,6 +14,28 @@ var encountersCompleted = 0;
 
 // Box holding all portals.
 var sceneContainer = document.getElementById('location-image-box');
+
+// Pick a random value between 0 and array length.
+function randomizeHistoricalFigure(min, max) {
+  var min = 0; // Array values.
+  var max = historicalFigures.length;
+  return Math.floor(Math.random() * (max - min) + min);
+  // return Math.random() * (max - min) + min;
+}
+console.log('Random number: ' + randomizeHistoricalFigure());
+
+// CONSTRUCTOR: function HistoricalFigure (name, comments, intro, image)
+// DATA ARRAY: var historicalFigures = [];
+function selectHistoricalFigure() {
+//randomizeHistoricalFigure
+  historicalFigure = historicalFigures[randomizeHistoricalFigure()];
+}
+selectHistoricalFigure();
+
+historicalFigureIntroEl.textContent = (historicalFigure.intro);
+historicalFigureImageEl.setAttribute('src', historicalFigure.image);
+
+console.log('Random Historical Figure: ' + historicalFigure.name);
 
 // Create all levels/scenes dynamically
 function generateScenes() {
