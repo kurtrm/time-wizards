@@ -101,7 +101,7 @@ function loadFromLocalStorage() {
 function handleClick(event){
   event.stopPropagation();
   event.preventDefault();
-
+  console.log(event);
   document.location.href = 'combat.html';
 }
 
