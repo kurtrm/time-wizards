@@ -252,6 +252,9 @@ historicalFigures.push(darwin);
 var elizabeth = new HistoricalFigure ('Queen Elizabeth', 'You can do it!', 'Hello pleb, I am the Queen, but I\'ll help you anyway.', ['images/figures300sq/figures-sq-med-queen-hat.jpg']);
 historicalFigures.push(elizabeth);
 
+var elvis = new HistoricalFigure ('Elvis', 'You ain\'t nothing but a hounddog. Chew \'em up!', 'I\'m back from the dead. I will help you with my musical ways.', ['images/elvis-1999737.png']);
+historicalFigures.push(elvis);
+
 // TEMPLATE EXAMPLE
 // parameters: (name, comments, intro, image)
 // types: string, string, string, string array [small image, large image]
@@ -270,6 +273,9 @@ historicalFigures.push(elizabeth);
 // images/figures150sq/figures-sq-sm-queen-hat.jpg
 
 //==========ENEMIES==========
+
+var darth = new Enemy ('Darth Vader', 'images/darth-vader-1282288.jpg', 'The Empire will defeat you!');
+enemies.push(darth);
 
 var trex = new Enemy ('T-rex', 'images/trex.jpg', 'RAWWWRRRRR!!!');
 enemies.push(trex);
