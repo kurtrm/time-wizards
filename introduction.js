@@ -9,7 +9,7 @@ loadLocalStorage();
 
 // The element that the introduction text goes.
 var robotIntroductionEl = document.getElementById('robot-introduction');
-robotIntroductionEl.textContent = 'Hello ' + playerName + '! ' + 'My name is generic robot and a discrepancy in my Subatomic-Unilateral-Concatenating-Kaleidoscope has ruptured the delicate balance of space time. Time warp holes have been created and parts of my S.U.C.K have been scattered. You must travel through these warp holes and retrieve my missing parts and fix my S.U.C.K. Each warp hole will send you to an unknown location, so beware!';
+robotIntroductionEl.textContent = 'Hello ' + playerName + '! ' + 'My name is generic robot and a discrepancy in my Subatomic-Unilateral-Concatenating-Kaleidoscope (S.U.C.K.) has ruptured the delicate balance of space time. Time warp holes have been created and parts of my S.U.C.K. have been scattered. You must travel through these warp holes and retrieve my missing parts and fix my S.U.C.K. Each warp hole will send you to an unknown location, so beware!';
 
 //this block hides the div containers until user clicks on buttons
 var topBox = document.getElementById('button-one');
