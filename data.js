@@ -90,7 +90,6 @@ var attackQuestionNine = new Question
   'The correct answer is list-style-type');
 attackQuestions.push(attackQuestionNine);
 
-console.log(attackQuestions);
 //==========DEFENSE QUESTIONS==========
 
 // 1 DEFENSE
@@ -286,6 +285,9 @@ enemies.push(kim);
 
 var robotLady = new Enemy ('Robot Lady', 'images/monsters300sq/monsters-sq-med-robot-lady.jpg', 'Wat?');
 enemies.push(robotLady);
+
+// Final question boss. Won't be put into normal enemy array.
+var dalek = new Enemy ('Dalek', 'images/monsters300sq/monsters-sq-med-dalek.jpg', 'Exterminate!');
 
 // TEMPLATE EXAMPLE
 // parameters: (name, image, speech)
