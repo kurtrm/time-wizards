@@ -152,7 +152,6 @@ function encounterRound(){
   }else{
     selectedQuestion = selectQuestion('final');
     document.getElementById('next-question').remove();
-    console.log('got here!!!');
   }
 
   // Set the text pertaining to the question for the player to see.

@@ -125,7 +125,7 @@ var defenseQuestionFourAnswerChoices = ['1812', '600', '1933', '1776'];
 var defenseQuestionFour = new Question
   ('In what year was modern worldwide interest sparked by a sighting of the Loch Ness Monster?',
   defenseQuestionFourAnswerChoices,
-  2,
+  0,
   '1812 is the correct answer! Study your history!');
 defenseQuestions.push(defenseQuestionFour);
 
@@ -187,19 +187,16 @@ finalQuestionAnswerChoices,
 var japan = new Scene (
   'Japan',
   'images/levels300sq/levels-sq-med-japan-temple.jpg');
-console.log(japan);
 locations.push(japan);
 
 var volcano = new Scene (
   'Volcano',
   'images/levels300sq/levels-sq-med-volcano.jpg');
-console.log(volcano);
 locations.push(volcano);
 
 var spaceStation = new Scene (
   'Space Station',
   'images/levels300sq/levels-sq-med-space-station.jpg');
-console.log(spaceStation);
 locations.push(spaceStation);
 
 // TEMPLATE EXAMPLE
@@ -245,19 +242,15 @@ locations.push(spaceStation);
 
 // This object defines the historical figure.
 var einstein = new HistoricalFigure ('Albert MF Einstein', ['You do not really understand something unless you can explain it to your grandmother.', 'It is a miracle that curiosity survives formal education.'], 'Hello friend my name is Albert and I\’m here to assist you. Please click on a portal below to begin your journey to fix time. Yell E=MC\xB2 as you jump into the portal!', ['images/albert.jpg']);
-console.log(einstein);
 historicalFigures.push(einstein);
 
 var bigfoot = new HistoricalFigure ('Bigfoot', 'You can do it!', 'Me Bigfoot. I help you.', ['images/figures300sq/figures-sq-med-bigfoot.jpg']);
-console.log(bigfoot);
 historicalFigures.push(bigfoot);
 
 var darwin = new HistoricalFigure ('Charles Darwin', 'You can do it!', 'Good day, my name is Darwin and I\’m here to assist you.', ['images/figures300sq/figures-sq-med-darwin-front.jpg']);
-console.log(darwin);
 historicalFigures.push(darwin);
 
 var elizabeth = new HistoricalFigure ('Queen Elizabeth', 'You can do it!', 'Hello pleb, I am the Queen, but I\'ll help you anyway.', ['images/figures300sq/figures-sq-med-queen-hat.jpg']);
-console.log(elizabeth);
 historicalFigures.push(elizabeth);
 
 // TEMPLATE EXAMPLE
@@ -280,23 +273,18 @@ historicalFigures.push(elizabeth);
 //==========ENEMIES==========
 
 var trex = new Enemy ('T-rex', 'images/trex.jpg', 'RAWWWRRRRR!!!');
-console.log(trex);
 enemies.push(trex);
 
 var plesiosaur = new Enemy ('Nessie Plesiosaur', 'images/monsters300sq/monsters-sq-med-dinosaur.jpg', 'RAWWWRRRRR!!!');
-console.log(plesiosaur);
 enemies.push(plesiosaur);
 
 var hitler = new Enemy ('Adolf Hitler', 'images/monsters300sq/monsters-sq-med-hitler.jpg', 'Narp!');
-console.log(hitler);
 enemies.push(hitler);
 
 var kim = new Enemy ('Kim Jong-un', 'images/monsters300sq/monsters-sq-med-kim.jpg', 'Launch!');
-console.log(kim);
 enemies.push(kim);
 
 var robotLady = new Enemy ('Robot Lady', 'images/monsters300sq/monsters-sq-med-robot-lady.jpg', 'Wat?');
-console.log(robotLady);
 enemies.push(robotLady);
 
 // TEMPLATE EXAMPLE

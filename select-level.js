@@ -1,106 +1,119 @@
 'use-strict';
 
-// This section adds text data to historical figure
+// Historical Figure image and text elements.
 var historicalFigureIntroEl = document.getElementById('historical-text');
 var historicalFigureImageEl = document.getElementById('historical-image');
-
+// The hidden button's container element we will append it to.
 var hiddenButtonContainerEl = document.getElementById('hidden-button-container');
-
-var historicalFigure;
-var scene = japan;
-
-var remainingHistoricalFigures;
-var remainingScenes;
-
-var encountersPerGame = 1;
-var encountersCompleted = 0;
-
-// Box holding all portals.
+// Container element for appending all portals.
 var sceneContainer = document.getElementById('location-image-box');
 
-// Pick a random value between 0 and array length.
-function randomizeHistoricalFigure(min, max) {
-  var min = 0; // Array values.
-  var max = historicalFigures.length;
+// The randomly chosen historical figure for the next encounter.
+var historicalFigure;
+// The randomly chosen scene that the player will fight at.
+var scene = japan;
+// The currently unused historical figures for this play-through.
+var remainingHistoricalFigures;
+// The currently unused scenes for this play-through.
+var remainingScenes;
+// How many encounters the player must survive before being presented with repairing the robot.
+var encountersPerGame = 1;
+// The current amount of completed encounters the player has done.
+var encountersCompleted = 0;
+
+// Returns a random whole number between the min (inclusive) and max (exclusive).
+function randomize(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
-  // return Math.random() * (max - min) + min;
 }
-console.log('Random number: ' + randomizeHistoricalFigure());
 
-// CONSTRUCTOR: function HistoricalFigure (name, comments, intro, image)
-// DATA ARRAY: var historicalFigures = [];
+// Selects a historical figure randomly out of the remaining figures not used and assigns the next figure.
 function selectHistoricalFigure() {
-//randomizeHistoricalFigure
-  historicalFigure = historicalFigures[randomizeHistoricalFigure()];
+  historicalFigure = remainingHistoricalFigures[randomize(0, remainingHistoricalFigures.length)];
 }
 
-// Create all levels/scenes dynamically
+// Generates ALL the scene DOM elements dynamically.
 function generateScenes() {
-
   for (var i = 0; i < locations.length; i++) {
-
-    console.log('Created ' + locations[i].name);
-
-    var sceneImage = document.createElement('img'); // Scene image.
+    // This current scene's image element.
+    var sceneImage = document.createElement('img');
     sceneImage.setAttribute('class', 'scene-image');
     sceneImage.setAttribute('id', 'scene-image-' + i);
     sceneImage.setAttribute('src', locations[i].image);
 
-    var sceneImageLink = document.createElement('a'); // Image link.
+    // The current scene's link element that the image is appended to.
+    var sceneImageLink = document.createElement('a');
     sceneImageLink.setAttribute('id', 'scene-portal-link-' + i);
     sceneImageLink.appendChild(sceneImage);
     sceneImageLink.setAttribute('href', 'combat.html');
 
-    var sceneName = document.createElement('h3'); // Portal name.
+    // The current scene's name element.
+    var sceneName = document.createElement('h3');
     sceneName.setAttribute('class', 'scene-name');
     sceneName.setAttribute('id', 'scene-name-' + i);
     sceneName.textContent = locations[i].name;
 
-    var sceneLink = document.createElement('a'); // Portal link.
+    // The current scene's link element that the name is appended to.
+    // Different from sceneImageLink for potential styling
+    // differences when hovering over the link.
+    var sceneLink = document.createElement('a');
     sceneLink.setAttribute('id', 'scene-link-' + i);
     sceneLink.appendChild(sceneName);
     sceneLink.setAttribute('href', 'combat.html');
 
-    var scenePortal = document.createElement('div'); // Container.
+    // The current scene's container element that all previous elements become nested in.
+    var scenePortal = document.createElement('div');
     scenePortal.setAttribute('class', 'scene');
     scenePortal.setAttribute('id', 'scene-portal-' + i);
     scenePortal.appendChild(sceneImageLink);
     scenePortal.appendChild(sceneLink);
 
+    // Place this newly made scene's portal into the container holding all portals.
     sceneContainer.appendChild(scenePortal);
   }
 }
 
+// Saves the current historical figure and remaining historical figures
+// based on previous encounter data.
 function rememberHistoricalFigures() {
-
-  // Pull random historicalFigure to localStorage if it doesn't already exist.
-  if(localStorage.getItem('historicalFigure') === null){
-    localStorage.setItem('historicalFigure', JSON.stringify(selectHistoricalFigure()));
-  }
-
+  // If this is NOT the first time getting to this page, historical figure and remaining
+  // historical figures are set from previous encounter data.
   if (localStorage.getItem('remainingHistoricalFigures') !== null) {
-  // If present the player has played a previous encounter already.
-  // Remove previous hist fig from remaining hist fig.
-  // console.log(remainingHistoricalFigures);
+    remainingHistoricalFigures = JSON.parse(localStorage.getItem('remainingHistoricalFigures'));
+    historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
+
+    // Check all remaining historical figures from before the encounter, and remove the one that
+    // was with the player for the previous encounter from the array.
     for (var i = 0; i < remainingHistoricalFigures.length; i++) {
       if (remainingHistoricalFigures[i].name === historicalFigure.name) {
-        reaminaingHistoricalFigures.splice([i], 1); // Remove = (index, array[1])
-        // Save entire figures array for first time.
-        localStorage.setItem('remainingHistoricalFigures', remainingHistoricalFigures);
+        remainingHistoricalFigures.splice([i], 1); // Remove = (index, array[1])
+        localStorage.setItem('remainingHistoricalFigures', JSON.stringify(remainingHistoricalFigures));
+        // Found the historical figure previously shown, exit the loop.
         break;
       }
     }
+
+    // Select a new historical figure for the next encounter out of the edited
+    // remaining historical figures' array.
+    selectHistoricalFigure();
+    localStorage.setItem('historicalFigure', JSON.stringify(historicalFigure));
   } else {
-  // False. 1st time page 3 loaded, this play-through.
-  // Setting remaining hist fig to hist fig array.
+    // This is the first time getting to this page for this play-through.
+    // The player will be given access to ALL possible historical figure partners to start with.
     remainingHistoricalFigures = historicalFigures;
-    localStorage.setItem('remainingHistoricalFigures', remainingHistoricalFigures);
+    localStorage.setItem('remainingHistoricalFigures', JSON.stringify(remainingHistoricalFigures));
+    // Generate the FIRST historical figure.
+    historicalFigure = historicalFigures[randomize(0, historicalFigures.length)];
+    localStorage.setItem('historicalFigure', JSON.stringify(historicalFigure));
   }
 }
 
+// Save all data that will be needed for the combat phase of the game.
 function saveToLocalStorage() {
+  // First save the historical figure data, which will change depending on if
+  // it's the first time the player has gotten to this page.
   rememberHistoricalFigures();
 
+  // Save the randomly generated scene.
   localStorage.setItem('scene', JSON.stringify(scene));
 
   // Add encountersCompleted to localStorage if it doesn't already exist.
@@ -114,18 +127,13 @@ function saveToLocalStorage() {
   }
 }
 
+// Loads the data needed for tracking the player's progress.
 function loadFromLocalStorage() {
-  player = JSON.parse(localStorage.getItem('player'));
   scene = JSON.parse(localStorage.getItem('scene'));
-  historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
   encountersCompleted = parseInt(localStorage.getItem('encountersCompleted'));
-
-  if(localStorage.getItem('historicalFigure') !== null){
-    // check current hist fig value, remove from possible next shown values.
-    historicalFigure = JSON.parse(localStorage.getItem('historicalFigure'));
-  }
 }
 
+// Handles the "Repair the Robot" button being clicked.
 function handleClick(event){
   event.stopPropagation();
   event.preventDefault();
@@ -133,22 +141,25 @@ function handleClick(event){
   document.location.href = 'combat.html';
 }
 
+// Save, load, and generate scene portals IN THAT ORDER.
 saveToLocalStorage();
 loadFromLocalStorage();
 generateScenes();
 
+// Display the current historical figure AFTER they have been generated.
 historicalFigureIntroEl.textContent = (historicalFigure.intro);
 historicalFigureImageEl.setAttribute('src', historicalFigure.image);
 
-console.log('Random Historical Figure: ' + historicalFigure.name);
-
+// If the player has just finished the final regular encounter,
+// they now will be given the option of going to repair the robot.
 if(encountersCompleted === encountersPerGame){
+  // The combat phase of the game will now know that it's the final question of the game.
   localStorage.setItem('finalQuestionOfGame', true);
+
   // Reveal final question button to combat phase.
   var hiddenButton = document.createElement('button');
   hiddenButton.setAttribute('id', 'hidden-button');
   hiddenButton.textContent = 'REPAIR THE ROBOT';
   hiddenButton.addEventListener('click', handleClick);
-
   hiddenButtonContainerEl.appendChild(hiddenButton);
 }
