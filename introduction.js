@@ -36,26 +36,26 @@ function addEventListeners () {
 }
 
 //the next four functions handle clicks for each individual button
-function handleClickTopBox (click) {
+function handleClickTopBox (event) {
   event.preventDefault();
   event.stopPropagation();
   hideCenterBox.style.visibility = 'visible';
   console.log('click');
 }
 
-function handleClickCenterBox (click) {
+function handleClickCenterBox (event) {
   event.preventDefault();
   event.stopPropagation();
   hideBottomBox.style.visibility = 'visible';
 }
 
-function handleClickBottomBox (click) {
+function handleClickBottomBox (event) {
   event.preventDefault();
   event.stopPropagation();
   hideFooter.style.visibility = 'visible';
 }
 
-function handleClickFooter (click) {
+function handleClickFooter (event) {
   event.preventDefault();
   event.stopPropagation();
   document.location.href = 'select-level.html';
